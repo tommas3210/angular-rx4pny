@@ -1,0 +1,41 @@
+
+    <button dw-button (click)="addRow()" class="editable-add-btn">Add</button>
+    <dw-table
+      #editRowTable
+      dwBordered
+      [dwData]="dataSet">
+      <thead>
+        <tr>
+          <th dwWidth="30%">Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of editRowTable.data">
+          <td>
+            <div class="editable-cell">
+              <div class="editable-cell-text-wrapper">
+                <ng-container *ngIf="!editCache[data.key].edit">
+                  {{data.name}}
+                  <i class="anticon anticon-edit editable-cell-icon" (click)="startEdit(data.key)"></i>
+                </ng-container>
+                <ng-container *ngIf="editCache[data.key].edit">
+                  <input type="text" dw-input [(ngModel)]="editCache[data.key].name">
+                  <i class="anticon anticon-check editable-cell-icon-check" (click)="finishEdit(data.key)"></i>
+                </ng-container>
+              </div>
+            </div>
+          </td>
+          <td>{{data.age}}</td>
+          <td>{{data.address}}</td>
+          <td>
+            <dw-popconfirm [dwTitle]="'Sure to delete?'" (dwOnConfirm)="deleteRow(data.key)">
+              <a dw-popconfirm>Delete</a>
+            </dw-popconfirm>
+          </td>
+        </tr>
+      </tbody>
+    </dw-table>
+  

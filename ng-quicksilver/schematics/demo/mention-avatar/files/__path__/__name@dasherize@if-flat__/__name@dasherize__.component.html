@@ -1,0 +1,14 @@
+
+  <dw-mention
+    [dwSuggestions]="webFrameworks"
+    [dwValueWith]="valueWith"
+    (dwOnSelect)="onSelect($event)">
+    <input
+      dw-input
+      dwMentionTrigger
+      [(ngModel)]="inputValue">
+    <ng-container *dwMentionSuggestion="let framework">
+      <dw-avatar dwSize="small" [dwText]="framework.name" [dwSrc]="framework.icon"></dw-avatar>
+      <span>{{ framework.name }} - {{ framework.type }}</span>
+    </ng-container>
+  </dw-mention>

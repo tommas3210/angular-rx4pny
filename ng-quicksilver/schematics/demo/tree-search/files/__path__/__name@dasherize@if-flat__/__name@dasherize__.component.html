@@ -1,0 +1,16 @@
+
+    <dw-input-group [dwSuffix]="suffixIcon">
+      <input type="text" dw-input placeholder="Search" [(ngModel)]="searchValue">
+    </dw-input-group>
+    <ng-template #suffixIcon>
+      <i class="anticon anticon-search"></i>
+    </ng-template>
+    <dw-tree
+      #treeCom
+      [dwData]="nodes"
+      [dwSearchValue]="searchValue"
+      (dwClick)="dwEvent($event)"
+      (dwExpandChange)="dwEvent($event)"
+      (dwSearchValueChange)="dwEvent($event)">
+    </dw-tree>
+  

@@ -1,0 +1,8 @@
+
+    <dw-select style="width: 100%;" [(ngModel)]="selectedUser" (dwScrollToBottom)="loadMore()" dwPlaceHolder="Select users" dwAllowClear>
+      <dw-option *ngFor="let o of optionList" [dwValue]="o" [dwLabel]="o"></dw-option>
+      <dw-option *ngIf="isLoading" dwDisabled dwCustomContent>
+        <i class="anticon anticon-loading anticon-spin loading-icon"></i> Loading Data...
+      </dw-option>
+    </dw-select>
+  

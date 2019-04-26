@@ -1,0 +1,9 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import { InjectionToken } from '@angular/core';
+/** @type {?} */
+export const DW_I18N = new InjectionToken('dw-i18n');
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZHctaTE4bi50b2tlbi5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25nLXF1aWNrc2lsdmVyLyIsInNvdXJjZXMiOlsiaTE4bi9kdy1pMThuLnRva2VuLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUUsY0FBYyxFQUFFLE1BQU0sZUFBZSxDQUFDOztBQUkvQyxhQUFhLE9BQU8sR0FBRyxJQUFJLGNBQWMsQ0FBa0IsU0FBUyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBJbmplY3Rpb25Ub2tlbiB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5pbXBvcnQgeyBEd0kxOG5JbnRlcmZhY2UgfSBmcm9tICcuL2R3LWkxOG4uaW50ZXJmYWNlJztcblxuZXhwb3J0IGNvbnN0IERXX0kxOE4gPSBuZXcgSW5qZWN0aW9uVG9rZW48RHdJMThuSW50ZXJmYWNlPignZHctaTE4bicpO1xuIl19

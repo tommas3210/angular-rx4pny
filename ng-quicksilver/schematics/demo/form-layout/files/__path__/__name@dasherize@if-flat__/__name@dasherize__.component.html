@@ -1,0 +1,32 @@
+
+    <form dw-form [dwLayout]="validateForm.get('formLayout')?.value" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+      <dw-form-item>
+        <dw-form-label [dwSpan]="isHorizontal? 4:null">Form Layout</dw-form-label>
+        <dw-form-control [dwSpan]="isHorizontal? 14:null">
+          <dw-radio-group formControlName="formLayout">
+            <label dw-radio-button [dwValue]="'horizontal'">Horizontal</label>
+            <label dw-radio-button [dwValue]="'vertical'">Vertical</label>
+            <label dw-radio-button [dwValue]="'inline'">Inline</label>
+          </dw-radio-group>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-label [dwSpan]="isHorizontal? 4:null">Field A</dw-form-label>
+        <dw-form-control [dwSpan]="isHorizontal? 14:null">
+          <input dw-input formControlName="fieldA" placeholder="input placeholder">
+          <dw-form-explain *ngIf="validateForm.get('fieldA').dirty && validateForm.get('fieldA').errors">Please input your username!</dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-label [dwSpan]="isHorizontal? 4:null">Field B</dw-form-label>
+        <dw-form-control [dwSpan]="isHorizontal? 14:null">
+          <input dw-input formControlName="filedB" placeholder="input placeholder">
+          <dw-form-explain *ngIf="validateForm.get('filedB').dirty && validateForm.get('filedB').errors">Please input your Password!</dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-control [dwSpan]="isHorizontal? 14:null" [dwOffset]="isHorizontal? 4:null">
+          <button dw-button dwType="primary">Submit</button>
+        </dw-form-control>
+      </dw-form-item>
+    </form>

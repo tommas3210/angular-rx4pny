@@ -1,0 +1,18 @@
+
+  <div class="clearfix">
+    <dw-upload
+      dwAction="https://jsonplaceholder.typicode.com/posts/"
+      dwListType="picture-card"
+      [(dwFileList)]="fileList"
+      [dwShowButton]="fileList.length < 3"
+      [dwPreview]="handlePreview">
+        <i class="anticon anticon-plus"></i>
+        <div class="ant-upload-text">Upload</div>
+    </dw-upload>
+    <dw-modal [dwVisible]="previewVisible" [dwContent]="modalContent" [dwFooter]="null" (dwOnCancel)="previewVisible=false">
+      <ng-template #modalContent>
+        <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+      </ng-template>
+    </dw-modal>
+  </div>
+  

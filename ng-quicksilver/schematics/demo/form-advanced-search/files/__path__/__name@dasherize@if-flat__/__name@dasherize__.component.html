@@ -1,0 +1,27 @@
+
+    <form dw-form [formGroup]="validateForm" class="ant-advanced-search-form">
+      <div dw-row [dwGutter]="24">
+        <div dw-col [dwSpan]="8" *ngFor="let control of controlArray" [style.display]="control.show?'block':'none'">
+          <dw-form-item dwFlex>
+            <dw-form-label [dwFor]="'field'+control.index">Field {{control.index}}</dw-form-label>
+            <dw-form-control>
+              <input dw-input placeholder="placeholder" [formControlName]="'field'+control.index" [attr.id]="'field'+control.index">
+            </dw-form-control>
+          </dw-form-item>
+        </div>
+      </div>
+      <div dw-row>
+        <div dw-col [dwSpan]="24" style="text-align: right;">
+          <button dw-button [dwType]="'primary'">Search</button>
+          <button dw-button (click)="resetForm()">Clear</button>
+          <a style="margin-left:8px;font-size:12px;" (click)="toggleCollapse()">
+            Collapse
+            <i class="anticon" [class.anticon-down]="isCollapse" [class.anticon-up]="!isCollapse"></i>
+          </a>
+        </div>
+      </div>
+    </form>
+    <div class="search-result-list">
+      Search Result List
+    </div>
+  

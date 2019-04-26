@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+export { DwMessageBaseService, DwMessageService } from './dw-message.service';
+export { DwMessageModule } from './dw-message.module';
+export { DwMessageComponent } from './dw-message.component';
+export { DwMessageContainerComponent } from './dw-message-container.component';
+export { DW_MESSAGE_DEFAULT_CONFIG, DW_MESSAGE_CONFIG, DW_MESSAGE_DEFAULT_CONFIG_PROVIDER } from './dw-message-config';
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25nLXF1aWNrc2lsdmVyLyIsInNvdXJjZXMiOlsibWVzc2FnZS9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSx1REFBYyxzQkFBc0IsQ0FBQztBQUNyQyxnQ0FBYyxxQkFBcUIsQ0FBQztBQUNwQyxtQ0FBYyx3QkFBd0IsQ0FBQztBQUV2Qyw0Q0FBYyxrQ0FBa0MsQ0FBQztBQUNqRCxpR0FBYyxxQkFBcUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gJy4vZHctbWVzc2FnZS5zZXJ2aWNlJztcbmV4cG9ydCAqIGZyb20gJy4vZHctbWVzc2FnZS5tb2R1bGUnO1xuZXhwb3J0ICogZnJvbSAnLi9kdy1tZXNzYWdlLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2R3LW1lc3NhZ2UuZGVmaW5pdGlvbnMnO1xuZXhwb3J0ICogZnJvbSAnLi9kdy1tZXNzYWdlLWNvbnRhaW5lci5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9kdy1tZXNzYWdlLWNvbmZpZyc7XG4iXX0=

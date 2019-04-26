@@ -1,0 +1,27 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: '<%= selector %>',
+  <% if(inlineTemplate) { %>template: `
+    <dw-card style="width:300px;" [dwCover]="coverTemplate" [dwActions]="[actionSetting,actionEdit,actionEllipsis]">
+      <dw-card-meta dwTitle="Card title" dwDescription="This is the description" [dwAvatar]="avatarTemplate"></dw-card-meta>
+    </dw-card>
+    <ng-template #avatarTemplate>
+      <dw-avatar dwSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></dw-avatar>
+    </ng-template>
+    <ng-template #coverTemplate>
+      <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"/>
+    </ng-template>
+    <ng-template #actionSetting>
+      <i class="anticon anticon-setting"></i>
+    </ng-template>
+    <ng-template #actionEdit>
+      <i class="anticon anticon-edit"></i>
+    </ng-template>
+    <ng-template #actionEllipsis>
+      <i class="anticon anticon-ellipsis"></i>
+    </ng-template>
+  `<% } else { %>templateUrl: './<%= dasherize(name) %>.component.html'<% } %>
+})
+export class <%= classify(name) %>Component {
+}

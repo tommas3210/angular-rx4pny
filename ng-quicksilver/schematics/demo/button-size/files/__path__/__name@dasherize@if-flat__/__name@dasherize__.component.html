@@ -1,0 +1,22 @@
+
+    <dw-radio-group [(ngModel)]="size">
+      <label dw-radio-button dwValue="large">Large</label>
+      <label dw-radio-button dwValue="default">Default</label>
+      <label dw-radio-button dwValue="small">Small</label>
+    </dw-radio-group>
+    <br>
+    <br>
+    <button dw-button [dwSize]="size" dwType="primary">Primary</button>
+    <button dw-button [dwSize]="size" dwType="default">Default</button>
+    <button dw-button [dwSize]="size" dwType="dashed">Dashed</button>
+    <button dw-button [dwSize]="size" dwType="danger">Danger</button>
+    <br>
+    <button dw-button dwType="primary" [dwSize]="size" dwShape="circle"><i class="anticon anticon-download"></i>
+    </button>
+    <button dw-button dwType="primary" [dwSize]="size"><i class="anticon anticon-download"></i>Download</button>
+    <br>
+    <dw-button-group [dwSize]="size">
+      <button dw-button dwType="primary"><i class="anticon anticon-left"></i>Backward</button>
+      <button dw-button dwType="primary">Forward<i class="anticon anticon-right"></i></button>
+    </dw-button-group>
+  

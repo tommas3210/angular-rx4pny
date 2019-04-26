@@ -1,0 +1,11 @@
+
+    <dw-tree-select style="width: 250px"
+      [dwNodes]="nodes"
+      [dwDefaultExpandAll]="true"
+      [dwAllowClear]="false"
+      dwPlaceHolder="Please select"
+      [(ngModel)]="value"
+      [dwMultiple]="true"
+      (ngModelChange)="onChange($event)">
+    </dw-tree-select>
+  

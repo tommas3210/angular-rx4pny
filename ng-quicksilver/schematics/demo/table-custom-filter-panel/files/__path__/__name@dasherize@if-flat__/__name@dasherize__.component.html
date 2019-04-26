@@ -1,0 +1,26 @@
+
+    <dw-table #dwTable [dwData]="displayData">
+      <thead>
+        <tr>
+          <th>
+            Name
+            <dw-dropdown dwTrigger="click" [dwClickHide]="false">
+              <i class="anticon anticon-smile-o ant-table-filter-icon" dw-dropdown></i>
+              <div class="custom-filter-dropdown">
+                <input type="text" dw-input placeholder="Search name" [(ngModel)]="searchValue">
+                <button dw-button [dwType]="'primary'" (click)="search()">Search</button>
+              </div>
+            </dw-dropdown>
+          </th>
+          <th>Age</th>
+          <th dwShowFilter [dwFilters]="filterAddressArray" (dwFilterChange)="filterAddressChange($event)">Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of dwTable.data">
+          <td>{{data.name}}</td>
+          <td>{{data.age}}</td>
+          <td>{{data.address}}</td>
+        </tr>
+      </tbody>
+    </dw-table>

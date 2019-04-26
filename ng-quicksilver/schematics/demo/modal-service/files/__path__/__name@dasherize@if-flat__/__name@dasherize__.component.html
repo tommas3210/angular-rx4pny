@@ -1,0 +1,35 @@
+
+    <button dw-button dwType="primary" (click)="createModal()">
+      <span>String</span>
+    </button>
+
+    <button dw-button dwType="primary" (click)="createTplModal(tplTitle, tplContent, tplFooter)">
+      <span>Template</span>
+    </button>
+    <ng-template #tplTitle>
+      <span>Title Template</span>
+    </ng-template>
+    <ng-template #tplContent>
+      <p>some contents...</p>
+      <p>some contents...</p>
+      <p>some contents...</p>
+      <p>some contents...</p>
+      <p>some contents...</p>
+    </ng-template>
+    <ng-template #tplFooter>
+      <button dw-button dwType="primary" (click)="destroyTplModal()" [dwLoading]="tplModalButtonLoading">Close after submit</button>
+    </ng-template>
+
+    <br /><br />
+
+    <button dw-button dwType="primary" (click)="createComponentModal()">
+      <span>Use Component</span>
+    </button>
+
+    <button dw-button dwType="primary" (click)="createCustomButtonModal()">Custom Button</button>
+
+    <br /><br />
+
+    <button dw-button dwType="primary" (click)="openAndCloseAll()">Open more modals then close all after 2s</button>
+    <dw-modal [(dwVisible)]="htmlModalVisible" dwMask="false" dwZIndex="1001" dwTitle="Non-service html modal">This is a non-service html modal</dw-modal>
+  

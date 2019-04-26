@@ -1,0 +1,10 @@
+
+    <dw-date-picker [dwDateRender]="tplRender"></dw-date-picker>
+    <dw-range-picker [dwDateRender]="tplRender"></dw-range-picker>
+
+    <ng-template #tplRender let-current>
+      <div class="ant-calendar-date" [class.border]="current.getDate() === 1">
+        {{ current.getDate() }}
+      </div>
+    </ng-template>
+  

@@ -1,0 +1,9 @@
+
+    <div style="border-bottom: 1px solid rgb(233, 233, 233);">
+      <label dw-checkbox [(ngModel)]="allChecked" (ngModelChange)="updateAllChecked()" [dwIndeterminate]="indeterminate">
+        Check all
+      </label>
+    </div>
+    <br>
+    <dw-checkbox-group [(ngModel)]="checkOptionsOne" (ngModelChange)="updateSingleChecked()"></dw-checkbox-group>
+  

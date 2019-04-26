@@ -1,0 +1,79 @@
+
+<ng-template #dwBasicSideDefaultSiderAfterMenu>
+</ng-template>
+<ng-template #dwBasicSideDefaultSider>
+  <div class="dw-f-menu-right">
+    <div class="dw-layout-basic-side-logo">
+      <img alt="logo" src="{{dwLogoPath | translate}}" *ngIf="logoUrl === null">
+      <a routerLink="{{logoUrl}}" *ngIf="logoUrl !== null">
+        <img alt="logo" src="{{dwLogoPath | translate}}">
+      </a>
+    </div>
+    <dw-recursive-menu [dwTheme]="theme" [dwMode]="isCollapsed?'vertical':'inline'" [dwInlineCollapsed]="isCollapsed"
+      [dwSelectable]="dwSelectable" [routeSelectMenu]="routeSelectMenu"></dw-recursive-menu>
+    <ng-container *ngTemplateOutlet="siderAfterMenuTemplate ? siderAfterMenuTemplate: dwBasicSideDefaultSiderAfterMenu"></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #dwBasicSideDefaultHeaderLeft>
+  <i class="anticon trigger dw-header-anticon" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed"
+    (click)="isCollapsed=!isCollapsed"></i>
+</ng-template>
+
+<ng-template #dwBasicSideDefaultHeaderRightUser>
+  <dw-tenant-block></dw-tenant-block>
+  <span class="anticon dw-layout-basic-side-username-icon dw-header-anticon">
+    <i class="anticon anticon-smile-o"></i>
+  </span>
+  <span>{{userDetail.userName}}</span>
+</ng-template>
+
+<ng-template #dwBasicSideDefaultHeaderRightAction>
+</ng-template>
+
+<ng-template #dwBasicSideDefaultHeaderRight>
+  <!-- <div class="dw-language-block">
+    <dw-language [template]="'basic'"></dw-language>
+  </div> -->
+  <div>
+    <ng-container *ngTemplateOutlet="headerRightActionTemplate ? headerRightActionTemplate: dwBasicSideDefaultHeaderRightAction"></ng-container>
+  </div>
+  <div>
+    <ng-container *ngTemplateOutlet="headerRightUserTemplate ? headerRightUserTemplate: dwBasicSideDefaultHeaderRightUser"></ng-container>
+  </div>
+  <div>
+    <i class="anticon anticon-logout dw-header-anticon" (click)="onLoggedout()"></i>
+  </div>
+</ng-template>
+
+<ng-template #dwBasicSideDefaultHeader>
+  <dw-header class="dw-f-header" [ngClass]="{'en_US':language==='en_US','zh_CN':language==='zh_CN', headerClass:headerClass}">
+    <div class="dw-header-left">
+      <ng-container *ngTemplateOutlet="headerLeftTemplate ? headerLeftTemplate: dwBasicSideDefaultHeaderLeft"></ng-container>
+    </div>
+    <div class="dw-header-right">
+      <ng-container *ngTemplateOutlet="headerRightTemplate ? headerRightTemplate: dwBasicSideDefaultHeaderRight"></ng-container>
+    </div>
+  </dw-header>
+</ng-template>
+
+<ng-template #dwBasicSideDefaultFooter>
+  <dw-footer class="dw-f-footer" [ngClass]="{'en_US':language==='en_US','zh_CN':language==='zh_CN'}" *ngIf="dwHasFooter">
+    <div class="dw-f-copyright">© 鼎新電腦股份有限公司. Copyright© Data Systems Consulting Co., Ltd. All rights reserved.</div>
+  </dw-footer>
+</ng-template>
+
+<dw-layout [ngClass]="{'dw-fWp-top-fixed': dwIsHeaderFixed, 'dw-fWp-footer-on': dwHasFooter, 'dw-fWp-tab-on': dwLayoutType==='tabMenu', 'en_US':language==='en_US', 'zh_CN':language==='zh_CN'}">
+  <dw-sider [dwWidth]="language==='en_US'?300:200" [dwCollapsedWidth]="language==='en_US'?60:72" [ngClass]="{'en_US':language==='en_US','zh_CN':language==='zh_CN'}" class="dw-f-menusider" dwCollapsible
+    [(dwCollapsed)]="isCollapsed" [dwTrigger]="null" [dwBreakpoint]="dwBreakpoint">
+    <ng-container *ngTemplateOutlet="siderTemplate ? siderTemplate: dwBasicSideDefaultSider"></ng-container>
+  </dw-sider>
+  <dw-layout [ngClass]="{'en_US':language==='en_US', 'zh_CN':language==='zh_CN', layoutClass:layoutClass}" class="dw-f-wrapper">
+    <ng-container *ngTemplateOutlet="headerTemplate ? headerTemplate: dwBasicSideDefaultHeader"></ng-container>
+    <dw-content class="dw-f-content-wp" [ngClass]="{'en_US':language==='en_US','zh_CN':language==='zh_CN'}">
+      <router-outlet *ngIf="!usingTab"></router-outlet>
+      <dw-routing-tabset *ngIf="usingTab"></dw-routing-tabset>
+    </dw-content>
+    <ng-container *ngTemplateOutlet="footerTemplate ? footerTemplate: dwBasicSideDefaultFooter"></ng-container>
+  </dw-layout>
+</dw-layout>

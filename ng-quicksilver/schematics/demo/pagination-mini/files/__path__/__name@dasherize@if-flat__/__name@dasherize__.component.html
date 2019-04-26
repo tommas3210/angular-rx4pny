@@ -1,0 +1,8 @@
+
+    <dw-pagination [(dwPageIndex)]="current" [dwTotal]="50" [dwSize]="'small'"></dw-pagination>
+    <br>
+    <dw-pagination [(dwPageIndex)]="current" [dwTotal]="50" [dwSize]="'small'" dwShowSizeChanger dwShowQuickJumper></dw-pagination>
+    <br>
+    <dw-pagination [(dwPageIndex)]="current" [dwTotal]="50" [dwSize]="'small'" [dwShowTotal]="totalTemplate"></dw-pagination>
+    <ng-template #totalTemplate let-total>Total {{total}} items</ng-template>
+  

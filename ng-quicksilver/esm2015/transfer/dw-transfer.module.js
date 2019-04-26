@@ -1,0 +1,25 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { DwButtonModule } from '../button/dw-button.module';
+import { DwCheckboxModule } from '../checkbox/dw-checkbox.module';
+import { DwI18nModule } from '../i18n/dw-i18n.module';
+import { DwInputModule } from '../input/dw-input.module';
+import { DwTransferListComponent } from './dw-transfer-list.component';
+import { DwTransferSearchComponent } from './dw-transfer-search.component';
+import { DwTransferComponent } from './dw-transfer.component';
+export class DwTransferModule {
+}
+DwTransferModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [CommonModule, FormsModule, DwCheckboxModule, DwButtonModule, DwInputModule, DwI18nModule],
+                declarations: [DwTransferComponent, DwTransferListComponent, DwTransferSearchComponent],
+                exports: [DwTransferComponent]
+            },] }
+];
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZHctdHJhbnNmZXIubW9kdWxlLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmctcXVpY2tzaWx2ZXIvIiwic291cmNlcyI6WyJ0cmFuc2Zlci9kdy10cmFuc2Zlci5tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSxpQkFBaUIsQ0FBQztBQUMvQyxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxXQUFXLEVBQUUsTUFBTSxnQkFBZ0IsQ0FBQztBQUU3QyxPQUFPLEVBQUUsY0FBYyxFQUFFLE1BQU0sNEJBQTRCLENBQUM7QUFDNUQsT0FBTyxFQUFFLGdCQUFnQixFQUFFLE1BQU0sZ0NBQWdDLENBQUM7QUFDbEUsT0FBTyxFQUFFLFlBQVksRUFBRSxNQUFNLHdCQUF3QixDQUFDO0FBQ3RELE9BQU8sRUFBRSxhQUFhLEVBQUUsTUFBTSwwQkFBMEIsQ0FBQztBQUV6RCxPQUFPLEVBQUUsdUJBQXVCLEVBQUUsTUFBTSw4QkFBOEIsQ0FBQztBQUN2RSxPQUFPLEVBQUUseUJBQXlCLEVBQUUsTUFBTSxnQ0FBZ0MsQ0FBQztBQUMzRSxPQUFPLEVBQUUsbUJBQW1CLEVBQUUsTUFBTSx5QkFBeUIsQ0FBQztBQU85RCxNQUFNOzs7WUFMTCxRQUFRLFNBQUM7Z0JBQ1IsT0FBTyxFQUFPLENBQUMsWUFBWSxFQUFFLFdBQVcsRUFBRSxnQkFBZ0IsRUFBRSxjQUFjLEVBQUUsYUFBYSxFQUFFLFlBQVksQ0FBQztnQkFDeEcsWUFBWSxFQUFFLENBQUMsbUJBQW1CLEVBQUUsdUJBQXVCLEVBQUUseUJBQXlCLENBQUM7Z0JBQ3ZGLE9BQU8sRUFBTyxDQUFDLG1CQUFtQixDQUFDO2FBQ3BDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tbW9uTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29tbW9uJztcbmltcG9ydCB7IE5nTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBGb3Jtc01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2Zvcm1zJztcblxuaW1wb3J0IHsgRHdCdXR0b25Nb2R1bGUgfSBmcm9tICcuLi9idXR0b24vZHctYnV0dG9uLm1vZHVsZSc7XG5pbXBvcnQgeyBEd0NoZWNrYm94TW9kdWxlIH0gZnJvbSAnLi4vY2hlY2tib3gvZHctY2hlY2tib3gubW9kdWxlJztcbmltcG9ydCB7IER3STE4bk1vZHVsZSB9IGZyb20gJy4uL2kxOG4vZHctaTE4bi5tb2R1bGUnO1xuaW1wb3J0IHsgRHdJbnB1dE1vZHVsZSB9IGZyb20gJy4uL2lucHV0L2R3LWlucHV0Lm1vZHVsZSc7XG5cbmltcG9ydCB7IER3VHJhbnNmZXJMaXN0Q29tcG9uZW50IH0gZnJvbSAnLi9kdy10cmFuc2Zlci1saXN0LmNvbXBvbmVudCc7XG5pbXBvcnQgeyBEd1RyYW5zZmVyU2VhcmNoQ29tcG9uZW50IH0gZnJvbSAnLi9kdy10cmFuc2Zlci1zZWFyY2guY29tcG9uZW50JztcbmltcG9ydCB7IER3VHJhbnNmZXJDb21wb25lbnQgfSBmcm9tICcuL2R3LXRyYW5zZmVyLmNvbXBvbmVudCc7XG5cbkBOZ01vZHVsZSh7XG4gIGltcG9ydHM6ICAgICAgW0NvbW1vbk1vZHVsZSwgRm9ybXNNb2R1bGUsIER3Q2hlY2tib3hNb2R1bGUsIER3QnV0dG9uTW9kdWxlLCBEd0lucHV0TW9kdWxlLCBEd0kxOG5Nb2R1bGVdLFxuICBkZWNsYXJhdGlvbnM6IFtEd1RyYW5zZmVyQ29tcG9uZW50LCBEd1RyYW5zZmVyTGlzdENvbXBvbmVudCwgRHdUcmFuc2ZlclNlYXJjaENvbXBvbmVudF0sXG4gIGV4cG9ydHM6ICAgICAgW0R3VHJhbnNmZXJDb21wb25lbnRdXG59KVxuZXhwb3J0IGNsYXNzIER3VHJhbnNmZXJNb2R1bGUgeyB9XG4iXX0=

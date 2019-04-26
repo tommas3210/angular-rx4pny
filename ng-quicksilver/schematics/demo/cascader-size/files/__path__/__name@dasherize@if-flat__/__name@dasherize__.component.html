@@ -1,0 +1,19 @@
+
+    <dw-cascader
+      [dwSize]="'large'"
+      [dwOptions]="dwOptions"
+      [(ngModel)]="value1"
+      (ngModelChange)="onChanges($event)">
+    </dw-cascader>
+    <dw-cascader
+      [dwOptions]="dwOptions"
+      [(ngModel)]="value2"
+      (ngModelChange)="onChanges($event)">
+    </dw-cascader>
+    <dw-cascader
+      [dwSize]="'small'"
+      [dwOptions]="dwOptions"
+      [(ngModel)]="value3"
+      (ngModelChange)="onChanges($event)">
+    </dw-cascader>
+  

@@ -1,0 +1,30 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { DwGridModule } from '../grid/dw-grid.module';
+import { DwFormControlComponent } from './dw-form-control.component';
+import { DwFormExplainComponent } from './dw-form-explain.component';
+import { DwFormExtraComponent } from './dw-form-extra.component';
+import { DwFormItemComponent } from './dw-form-item.component';
+import { DwFormLabelComponent } from './dw-form-label.component';
+import { DwFormSplitComponent } from './dw-form-split.component';
+import { DwFormTextComponent } from './dw-form-text.component';
+import { DwFormDirective } from './dw-form.directive';
+var DwFormModule = /** @class */ (function () {
+    function DwFormModule() {
+    }
+    DwFormModule.decorators = [
+        { type: NgModule, args: [{
+                    declarations: [DwFormExtraComponent, DwFormLabelComponent, DwFormDirective, DwFormItemComponent, DwFormControlComponent, DwFormExplainComponent, DwFormTextComponent, DwFormSplitComponent],
+                    exports: [DwFormExtraComponent, DwFormLabelComponent, DwFormDirective, DwFormItemComponent, DwFormControlComponent, DwFormExplainComponent, DwFormTextComponent, DwFormSplitComponent],
+                    imports: [CommonModule, DwGridModule]
+                },] }
+    ];
+    return DwFormModule;
+}());
+export { DwFormModule };
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZHctZm9ybS5tb2R1bGUuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9uZy1xdWlja3NpbHZlci8iLCJzb3VyY2VzIjpbImZvcm0vZHctZm9ybS5tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSxpQkFBaUIsQ0FBQztBQUMvQyxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBRXpDLE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSx3QkFBd0IsQ0FBQztBQUN0RCxPQUFPLEVBQUUsc0JBQXNCLEVBQUUsTUFBTSw2QkFBNkIsQ0FBQztBQUNyRSxPQUFPLEVBQUUsc0JBQXNCLEVBQUUsTUFBTSw2QkFBNkIsQ0FBQztBQUNyRSxPQUFPLEVBQUUsb0JBQW9CLEVBQUUsTUFBTSwyQkFBMkIsQ0FBQztBQUNqRSxPQUFPLEVBQUUsbUJBQW1CLEVBQUUsTUFBTSwwQkFBMEIsQ0FBQztBQUMvRCxPQUFPLEVBQUUsb0JBQW9CLEVBQUUsTUFBTSwyQkFBMkIsQ0FBQztBQUNqRSxPQUFPLEVBQUUsb0JBQW9CLEVBQUUsTUFBTSwyQkFBMkIsQ0FBQztBQUNqRSxPQUFPLEVBQUUsbUJBQW1CLEVBQUUsTUFBTSwwQkFBMEIsQ0FBQztBQUMvRCxPQUFPLEVBQUUsZUFBZSxFQUFFLE1BQU0scUJBQXFCLENBQUM7Ozs7O2dCQUVyRCxRQUFRLFNBQUM7b0JBQ1IsWUFBWSxFQUFFLENBQUUsb0JBQW9CLEVBQUUsb0JBQW9CLEVBQUUsZUFBZSxFQUFFLG1CQUFtQixFQUFFLHNCQUFzQixFQUFFLHNCQUFzQixFQUFFLG1CQUFtQixFQUFFLG9CQUFvQixDQUFFO29CQUM3TCxPQUFPLEVBQU8sQ0FBRSxvQkFBb0IsRUFBRSxvQkFBb0IsRUFBRSxlQUFlLEVBQUUsbUJBQW1CLEVBQUUsc0JBQXNCLEVBQUUsc0JBQXNCLEVBQUUsbUJBQW1CLEVBQUUsb0JBQW9CLENBQUU7b0JBQzdMLE9BQU8sRUFBTyxDQUFFLFlBQVksRUFBRSxZQUFZLENBQUU7aUJBQzdDOzt1QkFqQkQ7O1NBa0JhLFlBQVkiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21tb25Nb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb21tb24nO1xuaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuaW1wb3J0IHsgRHdHcmlkTW9kdWxlIH0gZnJvbSAnLi4vZ3JpZC9kdy1ncmlkLm1vZHVsZSc7XG5pbXBvcnQgeyBEd0Zvcm1Db250cm9sQ29tcG9uZW50IH0gZnJvbSAnLi9kdy1mb3JtLWNvbnRyb2wuY29tcG9uZW50JztcbmltcG9ydCB7IER3Rm9ybUV4cGxhaW5Db21wb25lbnQgfSBmcm9tICcuL2R3LWZvcm0tZXhwbGFpbi5jb21wb25lbnQnO1xuaW1wb3J0IHsgRHdGb3JtRXh0cmFDb21wb25lbnQgfSBmcm9tICcuL2R3LWZvcm0tZXh0cmEuY29tcG9uZW50JztcbmltcG9ydCB7IER3Rm9ybUl0ZW1Db21wb25lbnQgfSBmcm9tICcuL2R3LWZvcm0taXRlbS5jb21wb25lbnQnO1xuaW1wb3J0IHsgRHdGb3JtTGFiZWxDb21wb25lbnQgfSBmcm9tICcuL2R3LWZvcm0tbGFiZWwuY29tcG9uZW50JztcbmltcG9ydCB7IER3Rm9ybVNwbGl0Q29tcG9uZW50IH0gZnJvbSAnLi9kdy1mb3JtLXNwbGl0LmNvbXBvbmVudCc7XG5pbXBvcnQgeyBEd0Zvcm1UZXh0Q29tcG9uZW50IH0gZnJvbSAnLi9kdy1mb3JtLXRleHQuY29tcG9uZW50JztcbmltcG9ydCB7IER3Rm9ybURpcmVjdGl2ZSB9IGZyb20gJy4vZHctZm9ybS5kaXJlY3RpdmUnO1xuXG5ATmdNb2R1bGUoe1xuICBkZWNsYXJhdGlvbnM6IFsgRHdGb3JtRXh0cmFDb21wb25lbnQsIER3Rm9ybUxhYmVsQ29tcG9uZW50LCBEd0Zvcm1EaXJlY3RpdmUsIER3Rm9ybUl0ZW1Db21wb25lbnQsIER3Rm9ybUNvbnRyb2xDb21wb25lbnQsIER3Rm9ybUV4cGxhaW5Db21wb25lbnQsIER3Rm9ybVRleHRDb21wb25lbnQsIER3Rm9ybVNwbGl0Q29tcG9uZW50IF0sXG4gIGV4cG9ydHMgICAgIDogWyBEd0Zvcm1FeHRyYUNvbXBvbmVudCwgRHdGb3JtTGFiZWxDb21wb25lbnQsIER3Rm9ybURpcmVjdGl2ZSwgRHdGb3JtSXRlbUNvbXBvbmVudCwgRHdGb3JtQ29udHJvbENvbXBvbmVudCwgRHdGb3JtRXhwbGFpbkNvbXBvbmVudCwgRHdGb3JtVGV4dENvbXBvbmVudCwgRHdGb3JtU3BsaXRDb21wb25lbnQgXSxcbiAgaW1wb3J0cyAgICAgOiBbIENvbW1vbk1vZHVsZSwgRHdHcmlkTW9kdWxlIF1cbn0pXG5leHBvcnQgY2xhc3MgRHdGb3JtTW9kdWxlIHtcbn1cbiJdfQ==

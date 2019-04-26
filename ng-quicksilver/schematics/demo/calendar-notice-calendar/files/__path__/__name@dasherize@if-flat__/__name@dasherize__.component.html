@@ -1,0 +1,29 @@
+
+    <dw-calendar>
+      <ul *dwDateCell="let date" class="events">
+        <ng-container [ngSwitch]="date.getDate()">
+          <ng-container *ngSwitchCase="8">
+            <li *ngFor="let item of listDataMap.eight">
+              <dw-badge [dwStatus]="item.type" [dwText]="item.content"></dw-badge>
+            </li>
+          </ng-container>
+          <ng-container *ngSwitchCase="10">
+            <li *ngFor="let item of listDataMap.ten">
+              <dw-badge [dwStatus]="item.type" [dwText]="item.content"></dw-badge>
+            </li>
+          </ng-container>
+          <ng-container *ngSwitchCase="11">
+            <li *ngFor="let item of listDataMap.eleven">
+              <dw-badge [dwStatus]="item.type" [dwText]="item.content"></dw-badge>
+            </li>
+          </ng-container>
+        </ng-container>
+      </ul>
+      <ng-container *dwMonthCell="let month">
+        <div *ngIf="getMonthData(month) as monthData" class="notes-month">
+          <section>{{ monthData }}</section>
+          <span>Backlog number</span>
+        </div>
+      </ng-container>
+    </dw-calendar>
+  

@@ -1,0 +1,12 @@
+
+    <form [formGroup]="form" novalidate>
+      <dw-cascader
+        [dwOptions]="dwOptions"
+        (dwChange)="onChanges($event)"
+        [formControlName]="'name'">
+      </dw-cascader>
+    </form>
+    <br>
+    <button dw-button (click)="reset()">Reset</button>
+    <button dw-button (click)="submit()">Submit</button>
+  

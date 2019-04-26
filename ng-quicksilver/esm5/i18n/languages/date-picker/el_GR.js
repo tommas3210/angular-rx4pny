@@ -1,0 +1,15 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import * as tslib_1 from "tslib";
+import CalendarLocale from '../calendar/el_GR';
+import TimePickerLocale from '../time-picker/el_GR';
+/** @type {?} */
+var locale = {
+    lang: tslib_1.__assign({ placeholder: 'Επιλέξτε ημερομηνία', rangePlaceholder: ['Αρχική ημερομηνία', 'Τελική ημερομηνία'] }, CalendarLocale),
+    timePickerLocale: tslib_1.__assign({}, TimePickerLocale),
+};
+export default locale;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZWxfR1IuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9uZy1xdWlja3NpbHZlci8iLCJzb3VyY2VzIjpbImkxOG4vbGFuZ3VhZ2VzL2RhdGUtcGlja2VyL2VsX0dSLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsT0FBTyxjQUFjLE1BQU0sbUJBQW1CLENBQUM7QUFDL0MsT0FBTyxnQkFBZ0IsTUFBTSxzQkFBc0IsQ0FBQzs7QUFHcEQsSUFBTSxNQUFNLEdBQUc7SUFDYixJQUFJLHFCQUNGLFdBQVcsRUFBRSxxQkFBcUIsRUFDbEMsZ0JBQWdCLEVBQUUsQ0FBQyxtQkFBbUIsRUFBRSxtQkFBbUIsQ0FBQyxJQUN6RCxjQUFjLENBQ2xCO0lBQ0QsZ0JBQWdCLHVCQUNYLGdCQUFnQixDQUNwQjtDQUNGLENBQUM7QUFLRixlQUFlLE1BQU0sQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBDYWxlbmRhckxvY2FsZSBmcm9tICcuLi9jYWxlbmRhci9lbF9HUic7XG5pbXBvcnQgVGltZVBpY2tlckxvY2FsZSBmcm9tICcuLi90aW1lLXBpY2tlci9lbF9HUic7XG5cbi8vIE1lcmdlIGludG8gYSBsb2NhbGUgb2JqZWN0XG5jb25zdCBsb2NhbGUgPSB7XG4gIGxhbmc6IHtcbiAgICBwbGFjZWhvbGRlcjogJ86Vz4DOuc67zq3Ovs+EzrUgzrfOvM61z4HOv868zrfOvc6vzrEnLFxuICAgIHJhbmdlUGxhY2Vob2xkZXI6IFsnzpHPgc+HzrnOus6uIM63zrzOtc+Bzr/OvM63zr3Or86xJywgJ86kzrXOu865zrrOriDOt868zrXPgc6/zrzOt869zq/OsSddLFxuICAgIC4uLkNhbGVuZGFyTG9jYWxlLFxuICB9LFxuICB0aW1lUGlja2VyTG9jYWxlOiB7XG4gICAgLi4uVGltZVBpY2tlckxvY2FsZSxcbiAgfSxcbn07XG5cbi8vIEFsbCBzZXR0aW5ncyBhdDpcbi8vIGh0dHBzOi8vZ2l0aHViLmNvbS9hbnQtZGVzaWduL2FudC1kZXNpZ24vaXNzdWVzLzQyNFxuXG5leHBvcnQgZGVmYXVsdCBsb2NhbGU7XG4iXX0=

@@ -1,0 +1,7 @@
+
+    <dw-collapse [dwBordered]="false">
+      <dw-collapse-panel *ngFor="let panel of panels" [dwHeader]="panel.name" [dwActive]="panel.active">
+        <p>{{panel.name}} content</p>
+      </dw-collapse-panel>
+    </dw-collapse>
+  

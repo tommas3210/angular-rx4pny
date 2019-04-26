@@ -1,0 +1,18 @@
+<ng-template #dwRecursiveMenuItemSpanProg>
+  <span *ngIf="(transMenuId | translate).indexOf(menuPre) === -1; then menuTemplate else programTemplate"></span>
+  <ng-template #menuTemplate>
+    <span>{{transMenuId | translate}}</span>
+  </ng-template>
+  <ng-template #programTemplate>
+    <span>{{transProgramId | translate}}</span>
+  </ng-template>
+</ng-template>
+<ng-template #dwRecursiveMenuItemSpan>
+  <span class="nav-text" dw-tooltip  dwPlacement="right" [dwTitle]="title">
+    <ng-container *ngIf="!transProgramId; else dwRecursiveMenuItemSpanProg">
+      {{(transMenuId | translate).indexOf(menuPre) === -1 ? (transMenuId | translate):
+        menuIdSpan}}
+    </ng-container>
+    </span>
+</ng-template>
+<ng-container *ngTemplateOutlet="dwRecursiveMenuItemSpan"></ng-container>

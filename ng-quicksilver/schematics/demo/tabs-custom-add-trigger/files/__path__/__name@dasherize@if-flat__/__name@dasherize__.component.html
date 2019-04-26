@@ -1,0 +1,12 @@
+
+    <div style="margin-bottom: 16px;">
+      <button dw-button (click)="newTab()">ADD</button>
+    </div>
+    <dw-tabset [dwType]="'card'" [dwSelectedIndex]="index">
+      <dw-tab *ngFor="let tab of tabs" [dwTitle]="titleTemplate">
+        <ng-template #titleTemplate>
+          <div>{{ tab }}<i class="anticon anticon-close" (click)="closeTab(tab)"></i></div>
+        </ng-template>
+        Content of {{ tab }}
+      </dw-tab>
+    </dw-tabset>

@@ -1,0 +1,18 @@
+
+    <dw-transfer
+      [dwDataSource]="list"
+      dwShowSearch
+      [dwOperations]="['to right', 'to left']"
+      [dwListStyle]="{'width.px': 250, 'height.px': 300}"
+      [dwRender]="render"
+      [dwFooter]="footer"
+      (dwSelectChange)="select($event)"
+      (dwChange)="change($event)">
+      <ng-template #render let-item>
+        {{ item.title }}-{{ item.description }}
+      </ng-template>
+      <ng-template #footer let-direction>
+        <button dw-button (click)="reload(direction)" [dwSize]="'small'" style="float: right; margin: 5px;">reload</button>
+      </ng-template>
+    </dw-transfer>
+  

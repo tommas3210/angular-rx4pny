@@ -1,0 +1,33 @@
+import { ChangeDetectorRef, ElementRef, OnChanges, SimpleChanges, TemplateRef } from '@angular/core';
+import { DwUpdateHostClassService } from '../core/services/update-host-class.service';
+import { ListSize, DwListGrid } from './interface';
+export declare class DwListComponent implements OnChanges {
+    private el;
+    private cd;
+    private updateHostClassService;
+    dwDataSource: any[];
+    private _bordered;
+    dwBordered: boolean;
+    dwGrid: DwListGrid;
+    _isHeader: boolean;
+    _header: string;
+    _headerTpl: TemplateRef<void>;
+    dwHeader: string | TemplateRef<void>;
+    _isFooter: boolean;
+    _footer: string;
+    _footerTpl: TemplateRef<void>;
+    dwFooter: string | TemplateRef<void>;
+    dwItemLayout: 'vertical' | 'horizontal';
+    dwRenderItem: TemplateRef<void>;
+    private _loading;
+    dwLoading: boolean;
+    dwLoadMore: TemplateRef<void>;
+    dwPagination: TemplateRef<void>;
+    dwSize: ListSize;
+    private _split;
+    dwSplit: boolean;
+    private prefixCls;
+    private _setClassMap;
+    constructor(el: ElementRef, cd: ChangeDetectorRef, updateHostClassService: DwUpdateHostClassService);
+    ngOnChanges(changes: SimpleChanges): void;
+}

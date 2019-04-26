@@ -1,0 +1,11 @@
+
+    <dw-cascader
+      [dwOptions]="dwOptions"
+      [(ngModel)]="values"
+      (ngModelChange)="onChanges($event)">
+    </dw-cascader>
+    &nbsp;
+    <a href="javascript:;" (click)="changeDwOptions()" class="change-options">
+      Change Options
+    </a>
+    

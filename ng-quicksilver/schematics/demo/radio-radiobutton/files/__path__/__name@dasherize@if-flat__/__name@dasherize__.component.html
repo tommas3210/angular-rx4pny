@@ -1,0 +1,26 @@
+
+    <div>
+      <dw-radio-group [(ngModel)]="radioValue">
+        <label dw-radio-button dwValue="A">Hangzhou</label>
+        <label dw-radio-button dwValue="B">Shanghai</label>
+        <label dw-radio-button dwValue="C">Beijing</label>
+        <label dw-radio-button dwValue="D">Chengdu</label>
+      </dw-radio-group>
+    </div>
+    <div style="margin-top:16px;">
+      <dw-radio-group [(ngModel)]="radioValue">
+        <label dw-radio-button dwValue="A">Hangzhou</label>
+        <label dw-radio-button dwValue="B" dwDisabled>Shanghai</label>
+        <label dw-radio-button dwValue="C">Beijing</label>
+        <label dw-radio-button dwValue="D">Chengdu</label>
+      </dw-radio-group>
+    </div>
+    <div style="margin-top:16px;">
+      <dw-radio-group [(ngModel)]="radioValue">
+        <label dw-radio-button dwValue="A" dwDisabled>Hangzhou</label>
+        <label dw-radio-button dwValue="B" dwDisabled>Shanghai</label>
+        <label dw-radio-button dwValue="C" dwDisabled>Beijing</label>
+        <label dw-radio-button dwValue="D" dwDisabled>Chengdu</label>
+      </dw-radio-group>
+    </div>
+  

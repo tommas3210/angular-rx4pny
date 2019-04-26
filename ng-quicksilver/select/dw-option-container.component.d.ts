@@ -1,0 +1,57 @@
+import { AfterContentInit, EventEmitter, OnDestroy, QueryList } from '@angular/core';
+import { DwOptionGroupComponent } from './dw-option-group.component';
+import { DwOptionComponent } from './dw-option.component';
+import { Subscription } from 'rxjs';
+import { DwOptionLiComponent } from './dw-option-li.component';
+import { TFilterOption } from './dw-option.pipe';
+export declare class DwOptionContainerComponent implements AfterContentInit, OnDestroy {
+    private _listOfSelectedValue;
+    private _searchValue;
+    isInit: boolean;
+    isAddTagOptionDisplay: boolean;
+    listOfAllTemplateOption: DwOptionComponent[];
+    optionSubscription: Subscription;
+    groupSubscription: Subscription;
+    listOfTagOption: DwOptionComponent[];
+    listOfFilterOption: DwOptionComponent[];
+    activatedOption: DwOptionComponent;
+    /** can not use ViewChild since it will match sub options in option group **/
+    listOfDwOptionLiComponent: QueryList<DwOptionLiComponent>;
+    listOfDwOptionComponent: QueryList<DwOptionComponent>;
+    listOfDwOptionGroupComponent: QueryList<DwOptionGroupComponent>;
+    dwListOfSelectedValueChange: EventEmitter<any[]>;
+    dwListOfTemplateOptionChange: EventEmitter<DwOptionComponent[]>;
+    dwClickOption: EventEmitter<void>;
+    dwScrollToBottom: EventEmitter<void>;
+    dwMode: string;
+    dwServerSearch: boolean;
+    dwFilterOption: TFilterOption;
+    dwMaxMultipleCount: number;
+    dwNotFoundContent: string;
+    compareWith: (o1: any, o2: any) => boolean;
+    dwSearchValue: string;
+    dwListOfSelectedValue: any[];
+    addTagOption(): void;
+    clickOption(option: DwOptionComponent, isPressEnter: boolean): void;
+    onKeyDownUl(e: KeyboardEvent): void;
+    resetActiveOption(): void;
+    clearActivatedOption(): void;
+    setActiveOption(option: DwOptionComponent, scroll?: boolean): void;
+    scrollIntoView(): void;
+    updateSelectedOption(option: DwOptionComponent, isPressEnter: boolean): void;
+    refreshListOfTagOption(): void;
+    refreshListOfAllTemplateOption(): void;
+    refreshAllOptionStatus(isTemplateOptionChange: boolean): void;
+    updateListOfFilterOption(): void;
+    /** watch options change in option group **/
+    watchSubOptionChanges(): void;
+    unsubscribeGroup(): void;
+    unsubscribeOption(): void;
+    readonly isTagsMode: boolean;
+    readonly isMultipleOrTags: boolean;
+    readonly isNotFoundDisplay: boolean;
+    updateAddTagOptionDisplay(): void;
+    dropDownScroll(e: MouseEvent, ul: HTMLUListElement): void;
+    ngAfterContentInit(): void;
+    ngOnDestroy(): void;
+}

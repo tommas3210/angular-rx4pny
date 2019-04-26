@@ -1,0 +1,10 @@
+
+    <div>
+      <label dw-radio [dwDisabled]="disabled">Disabled</label>
+      <br>
+      <label dw-radio [dwDisabled]="disabled" [ngModel]="true">Disabled</label>
+      <div style="margin-top:20px;">
+        <button dw-button dwType="primary" (click)="disabled=!disabled">Toggle disabled</button>
+      </div>
+    </div>
+  

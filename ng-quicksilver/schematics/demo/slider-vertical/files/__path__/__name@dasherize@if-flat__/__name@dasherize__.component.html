@@ -1,0 +1,13 @@
+
+    <div [ngStyle]="{ height: '300px' }">
+      <div [ngStyle]="style">
+        <dw-slider dwVertical [dwDefaultValue]="30"></dw-slider>
+      </div>
+      <div [ngStyle]="style">
+        <dw-slider dwVertical dwRange [dwStep]="10" [dwDefaultValue]="[20, 50]"></dw-slider>
+      </div>
+      <div [ngStyle]="style">
+        <dw-slider dwVertical dwRange [dwMarks]="marks" [dwDefaultValue]="[26, 37]"></dw-slider>
+      </div>
+    </div>
+  

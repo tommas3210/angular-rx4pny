@@ -1,0 +1,22 @@
+
+    <div class="table-operations">
+      <button dw-button (click)="sort('age','descend')">Sort age</button>
+      <button dw-button (click)="resetFilters()">Clear filters</button>
+      <button dw-button (click)="resetSortAndFilters()">Clear filters and sorters</button>
+    </div>
+    <dw-table #filterTable [dwData]="displayData">
+      <thead>
+        <tr>
+          <th dwShowSort dwShowFilter [(dwSort)]="sortMap.name" (dwSortChange)="sort('name',$event)" [dwFilters]="filterNameList" (dwFilterChange)="search($event,searchAddressList)">Name</th>
+          <th dwShowSort [(dwSort)]="sortMap.age" (dwSortChange)="sort('age',$event)">Age</th>
+          <th dwShowSort dwShowFilter [(dwSort)]="sortMap.address" (dwSortChange)="sort('address',$event)" [dwFilters]="filterAddressList" (dwFilterChange)="search(searchNameList,$event)">Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of filterTable.data">
+          <td>{{data.name}}</td>
+          <td>{{data.age}}</td>
+          <td>{{data.address}}</td>
+        </tr>
+      </tbody>
+    </dw-table>

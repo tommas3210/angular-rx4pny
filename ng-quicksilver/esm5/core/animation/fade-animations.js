@@ -1,0 +1,15 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import { animate, state, style, transition, trigger, } from '@angular/animations';
+/** @type {?} */
+export var fadeAnimation = trigger('fadeAnimation', [
+    state('void', style({ opacity: 0 })),
+    state('true', style({ opacity: 1 })),
+    state('false', style({ opacity: 0 })),
+    transition('* => true', animate('150ms cubic-bezier(0.0, 0.0, 0.2, 1)')),
+    transition('* => void', animate('150ms cubic-bezier(0.4, 0.0, 1, 1)')),
+]);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmFkZS1hbmltYXRpb25zLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmctcXVpY2tzaWx2ZXIvIiwic291cmNlcyI6WyJjb3JlL2FuaW1hdGlvbi9mYWRlLWFuaW1hdGlvbnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFDTCxPQUFPLEVBQ1AsS0FBSyxFQUNMLEtBQUssRUFDTCxVQUFVLEVBQ1YsT0FBTyxHQUVSLE1BQU0scUJBQXFCLENBQUM7O0FBRTdCLFdBQWEsYUFBYSxHQUE4QixPQUFPLENBQUMsZUFBZSxFQUFFO0lBQy9FLEtBQUssQ0FBQyxNQUFNLEVBQUUsS0FBSyxDQUFDLEVBQUUsT0FBTyxFQUFFLENBQUMsRUFBRSxDQUFDLENBQUM7SUFDcEMsS0FBSyxDQUFDLE1BQU0sRUFBRSxLQUFLLENBQUMsRUFBRSxPQUFPLEVBQUUsQ0FBQyxFQUFFLENBQUMsQ0FBQztJQUNwQyxLQUFLLENBQUMsT0FBTyxFQUFFLEtBQUssQ0FBQyxFQUFFLE9BQU8sRUFBRSxDQUFDLEVBQUUsQ0FBQyxDQUFDO0lBQ3JDLFVBQVUsQ0FBQyxXQUFXLEVBQUUsT0FBTyxDQUFDLHNDQUFzQyxDQUFDLENBQUM7SUFDeEUsVUFBVSxDQUFDLFdBQVcsRUFBRSxPQUFPLENBQUMsb0NBQW9DLENBQUMsQ0FBQztDQUN2RSxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1xuICBhbmltYXRlLFxuICBzdGF0ZSxcbiAgc3R5bGUsXG4gIHRyYW5zaXRpb24sXG4gIHRyaWdnZXIsXG4gIEFuaW1hdGlvblRyaWdnZXJNZXRhZGF0YSxcbn0gZnJvbSAnQGFuZ3VsYXIvYW5pbWF0aW9ucyc7XG5cbmV4cG9ydCBjb25zdCBmYWRlQW5pbWF0aW9uOiBBbmltYXRpb25UcmlnZ2VyTWV0YWRhdGEgPSAgdHJpZ2dlcignZmFkZUFuaW1hdGlvbicsIFtcbiAgc3RhdGUoJ3ZvaWQnLCBzdHlsZSh7IG9wYWNpdHk6IDAgfSkpLFxuICBzdGF0ZSgndHJ1ZScsIHN0eWxlKHsgb3BhY2l0eTogMSB9KSksXG4gIHN0YXRlKCdmYWxzZScsIHN0eWxlKHsgb3BhY2l0eTogMCB9KSksXG4gIHRyYW5zaXRpb24oJyogPT4gdHJ1ZScsIGFuaW1hdGUoJzE1MG1zIGN1YmljLWJlemllcigwLjAsIDAuMCwgMC4yLCAxKScpKSxcbiAgdHJhbnNpdGlvbignKiA9PiB2b2lkJywgYW5pbWF0ZSgnMTUwbXMgY3ViaWMtYmV6aWVyKDAuNCwgMC4wLCAxLCAxKScpKSxcbl0pO1xuIl19

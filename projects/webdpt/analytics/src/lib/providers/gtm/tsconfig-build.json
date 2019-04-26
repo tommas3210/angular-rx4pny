@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "es2015",
+    "target": "es2015",
+    "noImplicitAny": false,
+    "outDir": "../../../../dist/gtm/es2015",
+    "rootDir": ".",
+    "sourceMap": true,
+    "inlineSources": true,
+    "declaration": true,
+    "removeComments": false,
+    "lib": ["es2015", "dom"],
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "paths": {
+      "ngx-analytics": ["../../../../dist/es2015/index"]
+    }
+  },
+  "files": ["ngx-analytics-gtm.ts"],
+  "angularCompilerOptions": {
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "enableSummariesForJit": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "ngx-analytics/gtm"
+  }
+}

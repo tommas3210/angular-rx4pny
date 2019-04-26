@@ -1,0 +1,5 @@
+
+    dw-date-picker, dw-month-picker, dw-year-picker, dw-range-picker, dw-week-picker {
+      margin: 0 8px 12px 0;
+    }
+  

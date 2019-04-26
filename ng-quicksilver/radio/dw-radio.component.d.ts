@@ -1,0 +1,37 @@
+import { AfterViewInit, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { ControlValueAccessor } from '@angular/forms';
+import { DwRadioGroupComponent } from './dw-radio-group.component';
+export declare class DwRadioComponent implements OnInit, ControlValueAccessor, AfterViewInit {
+    dwRadioGroup: DwRadioGroupComponent;
+    private renderer;
+    private document;
+    private _checked;
+    private _disabled;
+    private _autoFocus;
+    isInit: boolean;
+    classMap: any;
+    name: string;
+    prefixCls: string;
+    inputElement: ElementRef;
+    onChange: (_: boolean) => void;
+    onTouched: () => void;
+    dwValue: string;
+    dwChecked: boolean;
+    dwDisabled: boolean;
+    dwAutoFocus: boolean;
+    updateAutoFocus(): void;
+    updateInputFocus(): void;
+    onClick(e: MouseEvent): void;
+    onBlur(): void;
+    setClassMap(): void;
+    focus(): void;
+    blur(): void;
+    constructor(dwRadioGroup: DwRadioGroupComponent, renderer: Renderer2, document: any);
+    ngOnInit(): void;
+    updateValue(value: boolean): void;
+    setDisabledState(isDisabled: boolean): void;
+    writeValue(value: boolean): void;
+    registerOnChange(fn: (_: boolean) => {}): void;
+    registerOnTouched(fn: () => {}): void;
+    ngAfterViewInit(): void;
+}

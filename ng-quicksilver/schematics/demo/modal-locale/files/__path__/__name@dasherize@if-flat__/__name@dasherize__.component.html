@@ -1,0 +1,19 @@
+
+    <div>
+      <button dw-button dwType="primary" (click)="showModal()">Modal</button>
+      <dw-modal
+        [(dwVisible)]="isVisible"
+        dwTitle="Modal"
+        dwOkText="Ok"
+        dwCancelText="Cancel"
+        (dwOnOk)="handleOk()"
+        (dwOnCancel)="handleCancel()"
+      >
+        <p>Bla bla ...</p>
+        <p>Bla bla ...</p>
+        <p>Bla bla ...</p>
+      </dw-modal>
+    </div>
+    <br/>
+    <button dw-button dwType="info" (click)="showConfirm()">Confirm</button>
+  

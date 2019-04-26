@@ -1,0 +1,6 @@
+
+    <dw-input-group [dwSuffix]="suffixTemplate" dwPrefixIcon="anticon anticon-user">
+      <input type="text" dw-input placeholder="Enter your username" [(ngModel)]="username">
+    </dw-input-group>
+    <ng-template #suffixTemplate><i class="anticon anticon-close-circle" (click)="username=null" *ngIf="username"></i></ng-template>
+  

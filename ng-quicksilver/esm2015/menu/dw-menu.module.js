@@ -1,0 +1,25 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { DwButtonModule } from '../button/dw-button.module';
+import { DwMenuDividerDirective } from '../menu/dw-menu-divider.directive';
+import { DwMenuGroupComponent } from '../menu/dw-menu-group.component';
+import { DwMenuItemDirective } from '../menu/dw-menu-item.directive';
+import { DwMenuDirective } from '../menu/dw-menu.directive';
+import { DwSubMenuComponent } from '../menu/dw-submenu.component';
+export class DwMenuModule {
+}
+DwMenuModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [CommonModule, FormsModule, DwButtonModule, OverlayModule],
+                declarations: [DwMenuDirective, DwMenuItemDirective, DwSubMenuComponent, DwMenuDividerDirective, DwMenuGroupComponent],
+                exports: [DwMenuDirective, DwMenuItemDirective, DwSubMenuComponent, DwMenuDividerDirective, DwMenuGroupComponent]
+            },] }
+];
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZHctbWVudS5tb2R1bGUuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9uZy1xdWlja3NpbHZlci8iLCJzb3VyY2VzIjpbIm1lbnUvZHctbWVudS5tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBRSxhQUFhLEVBQUUsTUFBTSxzQkFBc0IsQ0FBQztBQUNyRCxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFDL0MsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUN6QyxPQUFPLEVBQUUsV0FBVyxFQUFFLE1BQU0sZ0JBQWdCLENBQUM7QUFFN0MsT0FBTyxFQUFFLGNBQWMsRUFBRSxNQUFNLDRCQUE0QixDQUFDO0FBQzVELE9BQU8sRUFBRSxzQkFBc0IsRUFBRSxNQUFNLG1DQUFtQyxDQUFDO0FBQzNFLE9BQU8sRUFBRSxvQkFBb0IsRUFBRSxNQUFNLGlDQUFpQyxDQUFDO0FBQ3ZFLE9BQU8sRUFBRSxtQkFBbUIsRUFBRSxNQUFNLGdDQUFnQyxDQUFDO0FBQ3JFLE9BQU8sRUFBRSxlQUFlLEVBQUUsTUFBTSwyQkFBMkIsQ0FBQztBQUM1RCxPQUFPLEVBQUUsa0JBQWtCLEVBQUUsTUFBTSw4QkFBOEIsQ0FBQztBQU9sRSxNQUFNOzs7WUFMTCxRQUFRLFNBQUM7Z0JBQ1IsT0FBTyxFQUFPLENBQUUsWUFBWSxFQUFFLFdBQVcsRUFBRSxjQUFjLEVBQUUsYUFBYSxDQUFFO2dCQUMxRSxZQUFZLEVBQUUsQ0FBRSxlQUFlLEVBQUUsbUJBQW1CLEVBQUUsa0JBQWtCLEVBQUUsc0JBQXNCLEVBQUUsb0JBQW9CLENBQUU7Z0JBQ3hILE9BQU8sRUFBTyxDQUFFLGVBQWUsRUFBRSxtQkFBbUIsRUFBRSxrQkFBa0IsRUFBRSxzQkFBc0IsRUFBRSxvQkFBb0IsQ0FBRTthQUN6SCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE92ZXJsYXlNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jZGsvb3ZlcmxheSc7XG5pbXBvcnQgeyBDb21tb25Nb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb21tb24nO1xuaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IEZvcm1zTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvZm9ybXMnO1xuXG5pbXBvcnQgeyBEd0J1dHRvbk1vZHVsZSB9IGZyb20gJy4uL2J1dHRvbi9kdy1idXR0b24ubW9kdWxlJztcbmltcG9ydCB7IER3TWVudURpdmlkZXJEaXJlY3RpdmUgfSBmcm9tICcuLi9tZW51L2R3LW1lbnUtZGl2aWRlci5kaXJlY3RpdmUnO1xuaW1wb3J0IHsgRHdNZW51R3JvdXBDb21wb25lbnQgfSBmcm9tICcuLi9tZW51L2R3LW1lbnUtZ3JvdXAuY29tcG9uZW50JztcbmltcG9ydCB7IER3TWVudUl0ZW1EaXJlY3RpdmUgfSBmcm9tICcuLi9tZW51L2R3LW1lbnUtaXRlbS5kaXJlY3RpdmUnO1xuaW1wb3J0IHsgRHdNZW51RGlyZWN0aXZlIH0gZnJvbSAnLi4vbWVudS9kdy1tZW51LmRpcmVjdGl2ZSc7XG5pbXBvcnQgeyBEd1N1Yk1lbnVDb21wb25lbnQgfSBmcm9tICcuLi9tZW51L2R3LXN1Ym1lbnUuY29tcG9uZW50JztcblxuQE5nTW9kdWxlKHtcbiAgaW1wb3J0cyAgICAgOiBbIENvbW1vbk1vZHVsZSwgRm9ybXNNb2R1bGUsIER3QnV0dG9uTW9kdWxlLCBPdmVybGF5TW9kdWxlIF0sXG4gIGRlY2xhcmF0aW9uczogWyBEd01lbnVEaXJlY3RpdmUsIER3TWVudUl0ZW1EaXJlY3RpdmUsIER3U3ViTWVudUNvbXBvbmVudCwgRHdNZW51RGl2aWRlckRpcmVjdGl2ZSwgRHdNZW51R3JvdXBDb21wb25lbnQgXSxcbiAgZXhwb3J0cyAgICAgOiBbIER3TWVudURpcmVjdGl2ZSwgRHdNZW51SXRlbURpcmVjdGl2ZSwgRHdTdWJNZW51Q29tcG9uZW50LCBEd01lbnVEaXZpZGVyRGlyZWN0aXZlLCBEd01lbnVHcm91cENvbXBvbmVudCBdXG59KVxuZXhwb3J0IGNsYXNzIER3TWVudU1vZHVsZSB7XG59XG4iXX0=

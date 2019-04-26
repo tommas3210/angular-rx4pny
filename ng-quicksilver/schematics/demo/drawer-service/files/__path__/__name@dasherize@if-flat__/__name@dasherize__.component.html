@@ -1,0 +1,14 @@
+
+    <ng-template #drawerTemplate let-data let-drawerRef="drawerRef">
+      value: {{data?.value}}
+      <br>
+      <button dw-button dwType="primary" (click)="drawerRef.close()">close</button>
+    </ng-template>
+    <div dw-form>
+      <dw-form-item>
+        <input dw-input [(ngModel)]="value">
+      </dw-form-item>
+    </div>
+    <button dw-button dwType="primary" (click)="openTemplate()">Use Template</button>&nbsp;
+    <button dw-button dwType="primary" (click)="openComponent()">Use Component</button>
+  

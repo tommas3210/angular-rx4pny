@@ -1,0 +1,8 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+export { DwSkeletonComponent } from './dw-skeleton.component';
+export { DwSkeletonModule } from './dw-skeleton.module';
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25nLXF1aWNrc2lsdmVyLyIsInNvdXJjZXMiOlsic2tlbGV0b24vcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsb0NBQWMseUJBQXlCLENBQUM7QUFDeEMsaUNBQWMsc0JBQXNCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tICcuL2R3LXNrZWxldG9uLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2R3LXNrZWxldG9uLm1vZHVsZSc7XG5leHBvcnQgKiBmcm9tICcuL2R3LXNrZWxldG9uLnR5cGUnO1xuIl19

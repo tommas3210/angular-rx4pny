@@ -1,0 +1,149 @@
+
+    <div class="components-table-demo-control-bar">
+      <form dw-form dwLayout="inline">
+        <dw-form-item>
+          <dw-form-label>
+            <label>Bordered</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="bordered" name="bordered"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Loading</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="loading" name="loading"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Pagination</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="pagination" name="pagination"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Title</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="title" name="title"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Column Header</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="header" name="header"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Footer</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="footer" name="footer"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Expandable</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="expandable" name="expandable"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Checkbox</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="checkbox" name="checkbox"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Fixed Header</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="fixHeader" name="fixHeader"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>No Result</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="noResult" (ngModelChange)="noResultChange($event)" name="noResult"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Simple Pagination</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-switch [(ngModel)]="simple" name="simple"></dw-switch>
+          </dw-form-control>
+        </dw-form-item>
+        <dw-form-item>
+          <dw-form-label>
+            <label>Size</label>
+          </dw-form-label>
+          <dw-form-control>
+            <dw-radio-group [(ngModel)]="size" name="size">
+              <label dw-radio-button dwValue="default">Default</label>
+              <label dw-radio-button dwValue="middle">Middle</label>
+              <label dw-radio-button dwValue="small">Small</label>
+            </dw-radio-group>
+          </dw-form-control>
+        </dw-form-item>
+      </form>
+    </div>
+    <dw-table
+      #dynamicTable
+      (dwCurrentPageDataChange)="currentPageDataChange($event)"
+      [dwScroll]="fixHeader?{ y: '240px' }:null"
+      [dwData]="dataSet"
+      [dwBordered]="bordered"
+      [dwSimple]="simple"
+      [dwLoading]="loading"
+      [dwFrontPagination]="pagination"
+      [dwShowPagination]="pagination"
+      [dwFooter]="footer?'Here is Footer':null"
+      [dwTitle]="title?'Here is Title':null"
+      [dwSize]="size">
+      <thead>
+        <tr *ngIf="header">
+          <th dwWidth="50px" dwShowExpand *ngIf="expandable"></th>
+          <th dwWidth="62px" dwShowCheckbox *ngIf="checkbox" [(dwChecked)]="allChecked" [dwIndeterminate]="indeterminate" (dwCheckedChange)="checkAll($event)"></th>
+          <th dwWidth="150px">Name</th>
+          <th dwWidth="70px">Age</th>
+          <th>Address</th>
+          <th dwWidth="260px">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-template ngFor let-data [ngForOf]="dynamicTable.data">
+          <tr>
+            <td dwShowExpand *ngIf="expandable" [(dwExpand)]="data.expand"></td>
+            <td dwShowCheckbox *ngIf="checkbox" [(dwChecked)]="data.checked" (dwCheckedChange)="refreshStatus()"></td>
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.address}}</td>
+            <td>
+              <a href="#">Action 一 {{data.name}}</a>
+              <dw-divider dwType="vertical"></dw-divider>
+              <a href="#">Delete</a>
+            </td>
+          </tr>
+          <tr [dwExpand]="data.expand&&expandable">
+            <td></td>
+            <td [attr.colspan]="checkbox?5:4">{{data.description}}</td>
+          </tr>
+        </ng-template>
+      </tbody>
+    </dw-table>

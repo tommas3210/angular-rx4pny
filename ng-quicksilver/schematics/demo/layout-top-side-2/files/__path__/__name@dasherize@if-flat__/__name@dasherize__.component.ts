@@ -1,0 +1,66 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: '<%= selector %>',
+  <% if(inlineTemplate) { %>template: `
+    <dw-layout class="layout">
+      <dw-header>
+        <div class="logo"></div>
+        <ul dw-menu [dwTheme]="'dark'" [dwMode]="'horizontal'" style="line-height: 64px;">
+          <li dw-menu-item>nav 1</li>
+          <li dw-menu-item>nav 2</li>
+          <li dw-menu-item>nav 3</li>
+        </ul>
+      </dw-header>
+      <dw-layout>
+        <dw-sider [dwWidth]="200" style="background:#fff">
+          <ul dw-menu [dwMode]="'inline'" style="height:100%">
+            <li dw-submenu>
+              <span title><i class="anticon anticon-user"></i>subnav 1</span>
+              <ul>
+                <li dw-menu-item>option1</li>
+                <li dw-menu-item>option2</li>
+                <li dw-menu-item>option3</li>
+                <li dw-menu-item>option4</li>
+              </ul>
+            </li>
+            <li dw-submenu>
+              <span title><i class="anticon anticon-laptop"></i>subnav 2</span>
+              <ul>
+                <li dw-menu-item>option5</li>
+                <li dw-menu-item>option6</li>
+                <li dw-menu-item>option7</li>
+                <li dw-menu-item>option8</li>
+              </ul>
+            </li>
+            <li dw-submenu>
+              <span title><i class="anticon anticon-notification"></i>subnav 3</span>
+              <ul>
+                <li dw-menu-item>option9</li>
+                <li dw-menu-item>option10</li>
+                <li dw-menu-item>option11</li>
+                <li dw-menu-item>option12</li>
+              </ul>
+            </li>
+          </ul>
+        </dw-sider>
+        <dw-layout style="padding:0 24px 24px">
+          <dw-breadcrumb style="margin:16px 0;">
+            <dw-breadcrumb-item>Home</dw-breadcrumb-item>
+            <dw-breadcrumb-item>List</dw-breadcrumb-item>
+            <dw-breadcrumb-item>App</dw-breadcrumb-item>
+          </dw-breadcrumb>
+          <dw-content style="background:#fff; padding: 24px; min-height: 280px;">Content</dw-content>
+        </dw-layout>
+      </dw-layout>
+    </dw-layout>
+  `<% } else { %>templateUrl: './<%= dasherize(name) %>.component.html'<% } %>,
+  <% if(inlineStyle) { %>styles: [`.logo {
+      width: 120px;
+      height: 31px;
+      background: rgba(255,255,255,.2);
+      margin: 16px 28px 16px 0;
+      float: left;
+    }`]<% } else { %>styleUrls: ['./<%= dasherize(name) %>.component.<%= styleext %>']<% } %>
+})
+export class <%= classify(name) %>Component { }

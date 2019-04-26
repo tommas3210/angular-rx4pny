@@ -1,0 +1,11 @@
+{
+  "apiUrl": "@WEB_SERVICE_URL@",
+  "iamUrl": "@IAM_SERVICE_URL@",
+  "emcUrl": "@EMC_SERVICE_URL@",
+  "orderUrl": "@ORDER_SERVICE_URL@",
+  "commodityUrl": "@COMMODITY_SERVICE_URL@",
+  "cacUrl": "@CAC_SERVICE_URL@",
+  "frUrl": "@FINEREPORT_URL@",
+  "frSignUrl": "@FINEREPORT_SIGN_URL@",
+  "dmcUrl": "@DMC_SERVICE_URL@"
+}

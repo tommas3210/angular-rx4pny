@@ -1,0 +1,28 @@
+
+  <form dw-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <dw-form-item>
+      <dw-form-label [dwSm]="6" dwFor="mention">Top coders</dw-form-label>
+      <dw-form-control [dwSm]="16">
+        <dw-mention
+          #mentions
+          [dwSuggestions]="suggestions">
+          <input
+            id="mention"
+            placeholder="input here"
+            formControlName="mention"
+            dwMentionTrigger
+            dw-input>
+        </dw-mention>
+        <dw-form-explain *ngIf="validateForm.get('mention').dirty && validateForm.get('mention').errors">
+          More than one must be selected!
+        </dw-form-explain>
+      </dw-form-control>
+    </dw-form-item>
+    <dw-form-item dw-row style="margin-bottom:8px;">
+      <dw-form-control [dwSpan]="14" [dwOffset]="6">
+        <button type="button" dw-button dwType="primary" (click)="submitForm()">Submit</button>
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" dw-button (click)="resetForm()">Reset</button>
+      </dw-form-control>
+    </dw-form-item>
+  </form>

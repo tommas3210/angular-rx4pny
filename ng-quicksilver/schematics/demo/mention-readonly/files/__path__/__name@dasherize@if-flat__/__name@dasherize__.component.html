@@ -1,0 +1,17 @@
+
+  <dw-mention
+    [dwSuggestions]="suggestions">
+    <input
+      style="margin-bottom: 10px"
+      placeholder="this is disabled Mention"
+      dwMentionTrigger
+      dw-input
+      disabled
+      [(ngModel)]="inputValue">
+    <input
+      placeholder="this is readOnly Mention"
+      dwMentionTrigger
+      dw-input
+      readOnly
+      [(ngModel)]="inputValue">
+  </dw-mention>

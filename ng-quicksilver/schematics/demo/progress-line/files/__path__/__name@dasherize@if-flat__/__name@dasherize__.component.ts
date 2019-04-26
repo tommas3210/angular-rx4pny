@@ -1,0 +1,13 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: '<%= selector %>',
+  <% if(inlineTemplate) { %>template: `
+    <dw-progress [dwPercent]="30"></dw-progress>
+    <dw-progress [dwPercent]="50" dwStatus="active"></dw-progress>
+    <dw-progress [dwPercent]="70" dwStatus="exception"></dw-progress>
+    <dw-progress [dwPercent]="100"></dw-progress>
+    <dw-progress [dwPercent]="50" [dwShowInfo]="false"></dw-progress>
+  `<% } else { %>templateUrl: './<%= dasherize(name) %>.component.html'<% } %>
+})
+export class <%= classify(name) %>Component { }

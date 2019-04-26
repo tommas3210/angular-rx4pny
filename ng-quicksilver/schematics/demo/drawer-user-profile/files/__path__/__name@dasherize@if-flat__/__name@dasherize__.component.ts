@@ -1,0 +1,169 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: '<%= selector %>',
+  <% if(inlineTemplate) { %>template: `
+    <dw-list [dwDataSource]="data" [dwRenderItem]="item" [dwItemLayout]="'horizontal'">
+      <ng-template #item let-item>
+        <dw-list-item [dwActions]="[viewAction]">
+          <ng-template #viewAction>
+            <a (click)="open()">View Profile</a>
+          </ng-template>
+          <dw-list-item-meta
+            [dwTitle]="dwTitle"
+            dwAvatar="https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png"
+            dwDescription="Progresser AFX">
+            <ng-template #dwTitle>
+              <a href="https://ng.ant.design">{{item.name}}</a>
+            </ng-template>
+          </dw-list-item-meta>
+        </dw-list-item>
+      </ng-template>
+    </dw-list>
+    <dw-drawer [dwVisible]="visible" [dwWidth]="640" [dwClosable]="false" (dwOnClose)="close()">
+      <p class="title" style=" margin-bottom: 24px;">User Profile</p>
+      <p class="title">Personal</p>
+      <div dw-row>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Full Name:</p>Lily
+          </div>
+        </div>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Account:</p>AntDesign@example.com
+          </div>
+        </div>
+      </div>
+      <div dw-row>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">City:</p>HangZhou
+          </div>
+        </div>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Country:</p>China🇨🇳
+          </div>
+        </div>
+      </div>
+      <div dw-row>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Birthday:</p>February 2,1900
+          </div>
+        </div>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Website:</p>-
+          </div>
+        </div>
+      </div>
+      <div dw-row>
+        <div dw-col dwSpan="24">
+          <div class="item-wrap">
+            <p class="label">Message:</p>Make things as simple as possible but no simpler.
+          </div>
+        </div>
+      </div>
+      <dw-divider></dw-divider>
+      <p class="title">Company</p>
+      <div dw-row>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Position:</p>Programmer
+          </div>
+        </div>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Responsibilities:</p>Coding
+          </div>
+        </div>
+      </div>
+      <div dw-row>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Department:</p>AFX
+          </div>
+        </div>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Supervisor:</p>
+            <a>Lin</a>
+          </div>
+        </div>
+      </div>
+      <div dw-row>
+        <div dw-col dwSpan="24">
+          <div class="item-wrap">
+            <p class="label">Skills:</p>C / C + +, data structures, software engineering, operating systems, computer networks, databases, compiler theory, computer architecture, Microcomputer Principle and Interface Technology, Computer English, Java, ASP, etc.
+          </div>
+        </div>
+      </div>
+      <dw-divider></dw-divider>
+      <p class="title">Contacts</p>
+      <div dw-row>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Email:</p>AntDesign@example.com
+          </div>
+        </div>
+        <div dw-col dwSpan="12">
+          <div class="item-wrap">
+            <p class="label">Phone Number:</p>+86 181 0000 0000
+          </div>
+        </div>
+      </div>
+      <div dw-row>
+        <div dw-col dwSpan="24">
+          <div class="item-wrap">
+            <p class="label">Github:</p>
+            <a href="https://github.com/NG-ZORRO/ng-quicksilver" target="_blank">github.com/NG-ZORRO/ng-quicksilver</a>
+          </div>
+        </div>
+      </div>
+    </dw-drawer>
+  `<% } else { %>templateUrl: './<%= dasherize(name) %>.component.html'<% } %>,
+  <% if(inlineStyle) { %>styles: [`
+    .title {
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.85);
+      line-height: 24px;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .item-wrap {
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 7px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+    .label {
+      margin-right: 8px;
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.85);
+    }
+    `]<% } else { %>styleUrls: ['./<%= dasherize(name) %>.component.<%= styleext %>']<% } %>
+})
+
+export class <%= classify(name) %>Component {
+
+  data = [
+    {
+      name: 'Lily'
+    },
+    {
+      name: 'Lily'
+    }
+  ];
+
+  visible = false;
+
+  open(): void {
+    this.visible = true;
+  }
+
+  close(): void {
+    this.visible = false;
+  }
+}

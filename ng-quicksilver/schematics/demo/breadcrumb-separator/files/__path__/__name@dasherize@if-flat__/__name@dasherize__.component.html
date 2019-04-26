@@ -1,0 +1,28 @@
+
+    <h4>String</h4>
+    <dw-breadcrumb dwSeparator=">">
+      <dw-breadcrumb-item>
+        Home
+      </dw-breadcrumb-item>
+      <dw-breadcrumb-item>
+        <a>Application List</a>
+      </dw-breadcrumb-item>
+      <dw-breadcrumb-item>
+        An Application
+      </dw-breadcrumb-item>
+    </dw-breadcrumb>
+    <br>
+    <h4>TemplateRef</h4>
+    <dw-breadcrumb [dwSeparator]="iconTemplate">
+      <dw-breadcrumb-item>
+        Home
+      </dw-breadcrumb-item>
+      <dw-breadcrumb-item>
+        <a>Application List</a>
+      </dw-breadcrumb-item>
+      <dw-breadcrumb-item>
+        An Application
+      </dw-breadcrumb-item>
+    </dw-breadcrumb>
+    <ng-template #iconTemplate><i class="anticon anticon-arrow-right"></i></ng-template>
+  

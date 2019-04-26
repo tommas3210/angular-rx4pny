@@ -1,0 +1,11 @@
+
+  <dw-mention
+    dwPlacement="top"
+    [dwSuggestions]="suggestions"
+    (dwOnSelect)="onSelect($event)">
+    <input
+      dwMentionTrigger
+      dw-input
+      [(ngModel)]="inputValue"
+      (ngModelChange)="onChange($event)">
+  </dw-mention>

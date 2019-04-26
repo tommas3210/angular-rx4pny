@@ -1,0 +1,10 @@
+export * from './repository/index';
+export { DwIamModule } from './iam.module';
+export { DwIamActionAuthorizedService } from './iam-action-authorized.service';
+export { DwIamAuthService } from './iam-auth.service';
+export { DwIamAuthorizedService } from './iam-authorized.service';
+export { DwIamLoggingService } from './iam-logging.service';
+export { DwIamPermissionInfoService } from './iam-permission-info.service';
+export { DwIamUserService } from './iam-user.service';
+export { DwIamTabRouteConfigService } from './iam-tab-route-config.service';
+export { DwIamForgetService } from './iam-forget.service';

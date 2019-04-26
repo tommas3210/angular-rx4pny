@@ -1,0 +1,15 @@
+
+    <p style="margin-bottom: 20px;">
+      <label dw-checkbox [(ngModel)]="isCheckedButton" [dwDisabled]="isDisabledButton">
+        {{ isCheckedButton ? 'Checked' : 'Unchecked' }} - {{ isDisabledButton ? 'Disabled' : 'Enabled' }}
+      </label>
+    </p>
+    <p>
+      <button dw-button [dwType]="'primary'" (click)="checkButton()" [dwSize]="'small'">
+        {{ !isCheckedButton ? 'Checked' : 'Unchecked' }}
+      </button>
+      <button dw-button [dwType]="'primary'" (click)="disableButton()" [dwSize]="'small'">
+        {{ isDisabledButton ? 'Enabled' : 'Disabled' }}
+      </button>
+    </p>
+  

@@ -1,0 +1,27 @@
+
+    <dw-table
+      #ajaxTable
+      dwShowSizeChanger
+      [dwFrontPagination]="false"
+      [dwData]="dataSet"
+      [dwLoading]="loading"
+      [dwTotal]="total"
+      [(dwPageIndex)]="pageIndex"
+      [(dwPageSize)]="pageSize"
+      (dwPageIndexChange)="searchData()"
+      (dwPageSizeChange)="searchData(true)">
+      <thead (dwSortChange)="sort($event)" dwSingleSort>
+        <tr>
+          <th dwShowSort dwSortKey="name">Name</th>
+          <th dwShowFilter [dwFilters]="filterGender" (dwFilterChange)="updateFilter($event)">Gender</th>
+          <th dwShowSort dwSortKey="email"><span>Email</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of ajaxTable.data">
+          <td>{{data.name.first}} {{data.name.last}}</td>
+          <td>{{data.gender}}</td>
+          <td>{{data.email}}</td>
+        </tr>
+      </tbody>
+    </dw-table>

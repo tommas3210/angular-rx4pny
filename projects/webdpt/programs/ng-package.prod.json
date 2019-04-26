@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/webdpt/programs",
+  "deleteDestPath": false,
+  "lib": {
+    "entryFile": "./index.ts",
+    "flatModuleFile": "programs",
+    "flatModuleId": "programs.js"
+  }
+}

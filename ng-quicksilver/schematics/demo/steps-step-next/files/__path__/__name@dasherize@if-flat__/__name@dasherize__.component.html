@@ -1,0 +1,20 @@
+
+    <dw-steps [dwCurrent]="current">
+      <dw-step dwTitle="Finished"></dw-step>
+      <dw-step dwTitle="In Progress"></dw-step>
+      <dw-step dwTitle="Waiting"></dw-step>
+    </dw-steps>
+
+    <div class="steps-content">{{ index }}</div>
+    <div class="steps-action">
+      <button dw-button dwType="default" (click)="pre()" *ngIf="current > 0">
+        <span>Previous</span>
+      </button>
+      <button dw-button dwType="default" (click)="next()" *ngIf="current < 2">
+        <span>Next</span>
+      </button>
+      <button dw-button dwType="primary" (click)="done()" *ngIf="current === 2">
+        <span>Done</span>
+      </button>
+    </div>
+  

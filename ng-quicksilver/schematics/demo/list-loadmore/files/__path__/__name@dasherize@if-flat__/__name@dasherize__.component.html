@@ -1,0 +1,31 @@
+
+  <dw-list
+    class="demo-loadmore-list"
+    [dwDataSource]="list"
+    [dwItemLayout]="'horizontal'"
+    [dwLoading]="initLoading"
+    [dwRenderItem]="item"
+    [dwLoadMore]="loadMore">
+    <ng-template #item let-item>
+      <dw-list-item [dwContent]="item.loading?'':'content'" [dwActions]="item.loading?[]:[editAction,moreAction]">
+        <dw-skeleton [dwAvatar]="true" [dwActive]="true" [dwTitle]="false" [dwLoading]="item.loading">
+          <ng-template #editAction><a (click)="edit(item)">edit</a></ng-template>
+          <ng-template #moreAction><a (click)="edit(item)">more</a></ng-template>
+          <dw-list-item-meta
+            [dwTitle]="dwTitle"
+            dwAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+            dwDescription="Ant Design, a design language for background applications, is refined by Ant UED Team">
+            <ng-template #dwTitle>
+              <a href="https://ng.ant.design">{{item.name.last}}</a>
+            </ng-template>
+          </dw-list-item-meta>
+        </dw-skeleton>
+      </dw-list-item>
+    </ng-template>
+    <ng-template #loadMore>
+      <div class="loadmore">
+        <button dw-button *ngIf="!loadingMore" (click)="onLoadMore()">loading more</button>
+      </div>
+    </ng-template>
+  </dw-list>
+  

@@ -1,0 +1,7 @@
+
+    <div class="example-input">
+      <input placeholder="input here" dw-input [(ngModel)]="inputValue" (ngModelChange)="onChange($event)" [dwAutocomplete]="auto">
+      <dw-autocomplete #auto>
+        <dw-auto-option *ngFor="let option of options" [dwValue]="option">{{option}}</dw-auto-option>
+      </dw-autocomplete>
+    </div>

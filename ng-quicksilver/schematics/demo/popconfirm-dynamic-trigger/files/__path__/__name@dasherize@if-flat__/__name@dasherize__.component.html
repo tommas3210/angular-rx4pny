@@ -1,0 +1,7 @@
+
+    <a dw-popconfirm dwTitle="Are you sure delete this task?" [dwCondition]="switchValue" (dwOnConfirm)="confirm()" (dwOnCancel)="cancel()">Delete a task</a>
+    <br>
+    <br>
+    Whether directly execute:
+    <dw-switch [(ngModel)]="switchValue"></dw-switch>
+  

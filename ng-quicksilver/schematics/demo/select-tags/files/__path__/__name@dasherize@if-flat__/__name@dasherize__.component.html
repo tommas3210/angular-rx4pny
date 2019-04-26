@@ -1,0 +1,6 @@
+
+    <dw-select dwMode="tags" style="width: 100%;" dwPlaceHolder="Tag Mode" [(ngModel)]="listOfTagOptions">
+      <dw-option *ngFor="let option of listOfOption" [dwLabel]="option.label" [dwValue]="option.value">
+      </dw-option>
+    </dw-select>
+  

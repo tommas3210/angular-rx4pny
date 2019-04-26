@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+export { DwAutocompleteModule } from './dw-autocomplete.module';
+export { DwAutocompleteComponent } from './dw-autocomplete.component';
+export { getDwAutocompleteMissingPanelError, DW_AUTOCOMPLETE_VALUE_ACCESSOR, DwAutocompleteTriggerDirective } from './dw-autocomplete-trigger.directive';
+export { DwOptionSelectionChange, DwAutocompleteOptionComponent } from './dw-autocomplete-option.component';
+export { DwAutocompleteOptgroupComponent } from './dw-autocomplete-optgroup.component';
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25nLXF1aWNrc2lsdmVyLyIsInNvdXJjZXMiOlsiYXV0by1jb21wbGV0ZS9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxxQ0FBYywwQkFBMEIsQ0FBQztBQUN6Qyx3Q0FBYyw2QkFBNkIsQ0FBQztBQUM1QyxtSEFBYyxxQ0FBcUMsQ0FBQztBQUNwRCx1RUFBYyxvQ0FBb0MsQ0FBQztBQUNuRCxnREFBYyxzQ0FBc0MsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCAqIGZyb20gJy4vZHctYXV0b2NvbXBsZXRlLm1vZHVsZSc7XG5leHBvcnQgKiBmcm9tICcuL2R3LWF1dG9jb21wbGV0ZS5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9kdy1hdXRvY29tcGxldGUtdHJpZ2dlci5kaXJlY3RpdmUnO1xuZXhwb3J0ICogZnJvbSAnLi9kdy1hdXRvY29tcGxldGUtb3B0aW9uLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2R3LWF1dG9jb21wbGV0ZS1vcHRncm91cC5jb21wb25lbnQnO1xuIl19

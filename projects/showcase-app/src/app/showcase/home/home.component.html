@@ -1,0 +1,172 @@
+<div dw-row [dwGutter]="20">
+  <div dw-col class="gutter-row" [dwXs]="'10'" [dwSm]="'14'" [dwMd]="'16'" [dwLg]="16">
+    <dw-card [dwBordered]="false" dwTitle="{{'公告'|translate}}">
+        <div dw-row *ngFor="let annItem of announcement; let annIdx = index" [dwGutter]="10" [ngClass]="{'dw-announcement-list': annIdx > 0}">
+          <div dw-col [dwXs]="'0'" [dwSm]="'0'" [dwMd]="'3'" [dwLg]="'2'">
+            <div dw-row>
+              <div dw-col class="dw-announcement-icon dw-announcement-title" [ngStyle]="{'background-color': annItem.bgColor != '' ? annItem.bgColor : ''}">
+                {{annItem.iconText}}
+              </div>
+            </div>
+          </div>
+          <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'21'" [dwLg]="'22'">
+            <div class="dw-announcement-title">{{annItem.title}}</div>
+            <div class="dw-announcement-author">{{annItem.author}}</div>
+          </div>
+        </div>
+
+        <!-- <div dw-row style="height:500px;padding-top: 50px">
+            <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'21'" [dwLg]="'22'">
+             測試tabRouting用:<dw-input type="input" [(ngModel)]="dwValue" style="width:100%"></dw-input>
+            </div>
+        </div>         -->
+    </dw-card>
+  </div>
+
+  <div dw-col class="gutter-row" [dwXs]="'14'" [dwSm]="'10'" [dwMd]="'8'" [dwLg]="8">
+    <div dw-row [dwGutter]="20">
+      <div dw-col>
+        <dw-card [dwBordered]="false" dwTitle="{{'快速開始 / 快捷導航'|translate}}" [dwExtra]="extraTemplate">
+          <ng-template #extraTemplate>
+            <a translate>更多</a>
+          </ng-template>
+            <div dw-row [dwGutter]="5">
+              <div dw-col [dwSpan]="6" translate>操作一</div>
+              <div dw-col [dwSpan]="6" translate>操作二</div>
+              <div dw-col [dwSpan]="6" translate>操作三</div>
+              <div dw-col [dwSpan]="6" translate>操作四</div>
+            </div>
+            <div dw-row [dwGutter]="5" class="dw-row-gutter">
+              <div dw-col [dwSpan]="6" translate>操作五</div>
+              <div dw-col [dwSpan]="6" translate>操作六</div>
+              <div dw-col [dwSpan]="6" translate>操作七</div>
+            </div>
+        </dw-card>
+      </div>
+    </div>
+    <div dw-row class="dw-row-gutter">
+      <div dw-col>
+        <dw-card [dwBordered]="false" dwTitle="{{'團隊' | translate}}">
+            <div dw-row [dwGutter]="5">
+              <div dw-col [dwSpan]="12">
+                <div dw-row>
+                  <div dw-col [dwXs]="'0'" [dwSm]="'0'" [dwMd]="'7'" [dwLg]="'5'">
+                    <div dw-row>
+                      <div dw-col class="dw-icon-s" style="background-color: rgb(16, 141, 233);">
+                        <img  src="./assets/img/showcase/u188.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'17'" [dwLg]="'19'" [translate]="'成員'">
+                    成員
+                  </div>
+                </div>
+              </div>
+              <div dw-col [dwSpan]="12">
+                <div dw-row>
+                  <div dw-col [dwXs]="'0'" [dwSm]="'0'" [dwMd]="'7'" [dwLg]="'5'">
+                    <div dw-row>
+                      <div dw-col class="dw-icon-s" style="background-color: rgb(16, 141, 233);">
+                        <img src="./assets/img/showcase/u191.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'17'" [dwLg]="'19'" [translate]="'成員'">
+                    成員
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div dw-row [dwGutter]="5" class="dw-row-gutter">
+              <div dw-col [dwSpan]="12">
+                <div dw-row>
+                  <div dw-col [dwXs]="'0'" [dwSm]="'0'" [dwMd]="'7'" [dwLg]="'5'">
+                    <div dw-row>
+                      <div dw-col class="dw-icon-s" style="background-color: rgb(16, 141, 233);">
+                        <img  src="./assets/img/showcase/u188.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'17'" [dwLg]="'19'" [translate]="'成員'">
+                  </div>
+                </div>
+              </div>
+              <div dw-col [dwSpan]="12">
+                <div dw-row>
+                  <div dw-col [dwXs]="'0'" [dwSm]="'0'" [dwMd]="'7'" [dwLg]="'5'">
+                    <div dw-row>
+                      <div dw-col class="dw-icon-s" style="background-color: rgb(16, 141, 233);">
+                        <img src="./assets/img/showcase/u191.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'17'" [dwLg]="'19'" [translate]="'成員'">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div dw-row [dwGutter]="5" class="dw-row-gutter">
+              <div dw-col [dwSpan]="12">
+                <div dw-row>
+                  <div dw-col [dwXs]="'0'" [dwSm]="'0'" [dwMd]="'7'" [dwLg]="'5'">
+                    <div dw-row>
+                      <div dw-col class="dw-icon-s" style="background-color: rgb(16, 141, 233);">
+                        <img  src="./assets/img/showcase/u188.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'17'" [dwLg]="'19'" [translate]="'成員'">
+                  </div>
+                </div>
+              </div>
+              <div dw-col [dwSpan]="12">
+                <div dw-row>
+                  <div dw-col [dwXs]="'0'" [dwSm]="'0'" [dwMd]="'7'" [dwLg]="'5'">
+                    <div dw-row>
+                      <div dw-col class="dw-icon-s" style="background-color: rgb(16, 141, 233);">
+                        <img src="./assets/img/showcase/u191.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'17'" [dwLg]="'19'" [translate]="'成員'">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div dw-row [dwGutter]="5" class="dw-row-gutter">
+              <div dw-col [dwSpan]="12">
+                <div dw-row>
+                  <div dw-col [dwXs]="'0'" [dwSm]="'0'" [dwMd]="'7'" [dwLg]="'5'">
+                    <div dw-row>
+                      <div dw-col class="dw-icon-s" style="background-color: rgb(16, 141, 233);">
+                        <img  src="./assets/img/showcase/u188.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'17'" [dwLg]="'19'" [translate]="'成員'">
+                  </div>
+                </div>
+              </div>
+              <div dw-col [dwSpan]="12">
+                <!-- <div dw-row>
+                  <div dw-col [dwXs]="'0'" [dwSm]="'0'" [dwMd]="'7'" [dwLg]="'5'">
+                    <div dw-row>
+                      <div dw-col class="dw-icon-s" style="background-color: rgb(16, 141, 233);">
+                        <img src="./assets/img/showcase/u191.png">
+                      </div>
+                    </div>
+                  </div>
+                  <div dw-col [dwXs]="'24'" [dwSm]="'24'" [dwMd]="'17'" [dwLg]="'19'">
+                    成員
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+        </dw-card>
+      </div>
+    </div>
+
+  </div>
+</div>

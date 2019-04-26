@@ -1,0 +1,5 @@
+
+    <dw-select [dwMaxMultipleCount]="3" style="width: 100%" dwMode="multiple" dwPlaceHolder="Please select" [(ngModel)]="listOfSelectedValue">
+      <dw-option *ngFor="let option of listOfOption" [dwLabel]="option.label" [dwValue]="option.value"></dw-option>
+    </dw-select>
+  

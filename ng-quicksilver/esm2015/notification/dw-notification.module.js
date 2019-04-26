@@ -1,0 +1,23 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { DW_NOTIFICATION_DEFAULT_CONFIG_PROVIDER } from './dw-notification-config';
+import { DwNotificationContainerComponent } from './dw-notification-container.component';
+import { DwNotificationComponent } from './dw-notification.component';
+import { DwNotificationService } from './dw-notification.service';
+export class DwNotificationModule {
+}
+DwNotificationModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [CommonModule, OverlayModule],
+                declarations: [DwNotificationComponent, DwNotificationContainerComponent],
+                providers: [DW_NOTIFICATION_DEFAULT_CONFIG_PROVIDER, DwNotificationService],
+                entryComponents: [DwNotificationContainerComponent]
+            },] }
+];
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZHctbm90aWZpY2F0aW9uLm1vZHVsZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25nLXF1aWNrc2lsdmVyLyIsInNvdXJjZXMiOlsibm90aWZpY2F0aW9uL2R3LW5vdGlmaWNhdGlvbi5tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLE9BQU8sRUFBRSxhQUFhLEVBQUUsTUFBTSxzQkFBc0IsQ0FBQztBQUNyRCxPQUFPLEVBQUUsWUFBWSxFQUFFLE1BQU0saUJBQWlCLENBQUM7QUFDL0MsT0FBTyxFQUFFLFFBQVEsRUFBRSxNQUFNLGVBQWUsQ0FBQztBQUV6QyxPQUFPLEVBQUUsdUNBQXVDLEVBQUUsTUFBTSwwQkFBMEIsQ0FBQztBQUNuRixPQUFPLEVBQUUsZ0NBQWdDLEVBQUUsTUFBTSx1Q0FBdUMsQ0FBQztBQUN6RixPQUFPLEVBQUUsdUJBQXVCLEVBQUUsTUFBTSw2QkFBNkIsQ0FBQztBQUN0RSxPQUFPLEVBQUUscUJBQXFCLEVBQUUsTUFBTSwyQkFBMkIsQ0FBQztBQVFsRSxNQUFNOzs7WUFOTCxRQUFRLFNBQUM7Z0JBQ1IsT0FBTyxFQUFFLENBQUUsWUFBWSxFQUFFLGFBQWEsQ0FBRTtnQkFDeEMsWUFBWSxFQUFFLENBQUUsdUJBQXVCLEVBQUUsZ0NBQWdDLENBQUU7Z0JBQzNFLFNBQVMsRUFBRSxDQUFFLHVDQUF1QyxFQUFFLHFCQUFxQixDQUFFO2dCQUM3RSxlQUFlLEVBQUUsQ0FBRSxnQ0FBZ0MsQ0FBRTthQUN0RCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE92ZXJsYXlNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jZGsvb3ZlcmxheSc7XG5pbXBvcnQgeyBDb21tb25Nb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb21tb24nO1xuaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuaW1wb3J0IHsgRFdfTk9USUZJQ0FUSU9OX0RFRkFVTFRfQ09ORklHX1BST1ZJREVSIH0gZnJvbSAnLi9kdy1ub3RpZmljYXRpb24tY29uZmlnJztcbmltcG9ydCB7IER3Tm90aWZpY2F0aW9uQ29udGFpbmVyQ29tcG9uZW50IH0gZnJvbSAnLi9kdy1ub3RpZmljYXRpb24tY29udGFpbmVyLmNvbXBvbmVudCc7XG5pbXBvcnQgeyBEd05vdGlmaWNhdGlvbkNvbXBvbmVudCB9IGZyb20gJy4vZHctbm90aWZpY2F0aW9uLmNvbXBvbmVudCc7XG5pbXBvcnQgeyBEd05vdGlmaWNhdGlvblNlcnZpY2UgfSBmcm9tICcuL2R3LW5vdGlmaWNhdGlvbi5zZXJ2aWNlJztcblxuQE5nTW9kdWxlKHtcbiAgaW1wb3J0czogWyBDb21tb25Nb2R1bGUsIE92ZXJsYXlNb2R1bGUgXSxcbiAgZGVjbGFyYXRpb25zOiBbIER3Tm90aWZpY2F0aW9uQ29tcG9uZW50LCBEd05vdGlmaWNhdGlvbkNvbnRhaW5lckNvbXBvbmVudCBdLFxuICBwcm92aWRlcnM6IFsgRFdfTk9USUZJQ0FUSU9OX0RFRkFVTFRfQ09ORklHX1BST1ZJREVSLCBEd05vdGlmaWNhdGlvblNlcnZpY2UgXSxcbiAgZW50cnlDb21wb25lbnRzOiBbIER3Tm90aWZpY2F0aW9uQ29udGFpbmVyQ29tcG9uZW50IF1cbn0pXG5leHBvcnQgY2xhc3MgRHdOb3RpZmljYXRpb25Nb2R1bGUgeyB9XG4iXX0=

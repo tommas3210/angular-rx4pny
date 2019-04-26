@@ -1,0 +1,11 @@
+
+    <ng-template #contentTemplate>
+      <div>
+        <p>Content</p>
+        <p>Content</p>
+      </div>
+    </ng-template>
+    <button dw-button dw-popover dwTitle="Title" [dwContent]="contentTemplate" dwTrigger="click">Click me</button>
+    <button dw-button dw-popover dwTitle="Title" [dwContent]="contentTemplate" dwTrigger="hover">Hover me</button>
+    <button dw-button dw-popover dwTitle="Title" [dwContent]="contentTemplate" dwTrigger="focus">Focus me</button>
+  

@@ -1,0 +1,20 @@
+
+  <h3 [ngStyle]="{'margin-bottom.px': 16 }">Default Size</h3>
+  <dw-list [dwDataSource]="data" dwBordered
+           [dwHeader]="'Header'" [dwFooter]="'Footer'"
+           [dwRenderItem]="item">
+    <ng-template #item let-item><dw-list-item [dwContent]="item"></dw-list-item></ng-template>
+  </dw-list>
+  <h3 [ngStyle]="{'margin': '16px 0' }">Small Size</h3>
+  <dw-list [dwDataSource]="data" dwBordered dwSize="small"
+           [dwHeader]="'Header'" [dwFooter]="'Footer'"
+           [dwRenderItem]="item">
+    <ng-template #item let-item><dw-list-item [dwContent]="item"></dw-list-item></ng-template>
+  </dw-list>
+  <h3 [ngStyle]="{'margin': '16px 0' }">Large Size</h3>
+  <dw-list [dwDataSource]="data" dwBordered dwSize="large"
+           [dwHeader]="'Header'" [dwFooter]="'Footer'"
+           [dwRenderItem]="item">
+    <ng-template #item let-item><dw-list-item [dwContent]="item"></dw-list-item></ng-template>
+  </dw-list>
+  

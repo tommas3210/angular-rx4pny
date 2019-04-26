@@ -1,0 +1,7 @@
+
+    <p>The selected option's age is {{selectedValue?.age}}</p>
+    <br>
+    <dw-select style="width: 120px;" [compareWith]="compareFn" [(ngModel)]="selectedValue" (ngModelChange)="log($event)" dwAllowClear dwPlaceHolder="Choose">
+      <dw-option *ngFor="let option of optionList" [dwValue]="option" [dwLabel]="option.label"></dw-option>
+    </dw-select>
+  

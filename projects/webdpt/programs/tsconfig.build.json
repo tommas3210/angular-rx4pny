@@ -1,0 +1,28 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "module": "es2015",
+    "outDir": "../../publish/webdpt/programs/src",
+    "baseUrl": "./",
+    "declaration": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "target": "es5",
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  },
+  "files": [
+    "./programs.module.ts"
+  ],
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "@webdpt/programs"
+  }
+}

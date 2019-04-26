@@ -1,0 +1,10 @@
+
+  <dw-mention
+    [dwSuggestions]="suggestions"
+    [dwLoading]="loading"
+    (dwOnSearchChange)="onSearchChange($event)">
+    <input
+      dwMentionTrigger
+      dw-input
+      [(ngModel)]="inputValue">
+  </dw-mention>

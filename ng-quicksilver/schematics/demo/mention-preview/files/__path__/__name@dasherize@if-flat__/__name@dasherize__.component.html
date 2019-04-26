@@ -1,0 +1,18 @@
+
+  <dw-tabset>
+      <dw-tab dwTitle="Write">
+        <dw-mention
+          [dwSuggestions]="suggestions">
+           <textarea
+              dw-input
+              [dwAutosize]="{minRows: 4, maxRows: 4}"
+              [(ngModel)]="inputValue"
+              (ngModelChange)="renderPreView()"
+              dwMentionTrigger>
+            </textarea>
+        </dw-mention>
+      </dw-tab>
+      <dw-tab dwTitle="Preview">
+          <pre [innerHTML]="preview"></pre>
+      </dw-tab>
+    </dw-tabset>

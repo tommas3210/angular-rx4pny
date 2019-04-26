@@ -1,0 +1,11 @@
+
+    {{text}}
+    <dw-cascader
+      [dwShowInput]="false"
+      [dwOptions]="dwOptions"
+      [(ngModel)]="values"
+      (ngModelChange)="onChanges($event)"
+      (dwSelectionChange)="onSelectionChange($event)"
+      >
+      <a href="javascript: void(0)">Change city</a>
+    </dw-cascader>

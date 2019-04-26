@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+export { DwModalComponent } from './dw-modal.component';
+export { DwModalRef } from './dw-modal-ref.class';
+export { DwModalModule } from './dw-modal.module';
+export { DwModalService } from './dw-modal.service';
+export { DW_MODAL_CONFIG } from './dw-modal-config';
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25nLXF1aWNrc2lsdmVyLyIsInNvdXJjZXMiOlsibW9kYWwvcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLGdCQUFnQixFQUFFLE1BQU0sc0JBQXNCLENBQUM7QUFDeEQsT0FBTyxFQUFFLFVBQVUsRUFBRSxNQUFNLHNCQUFzQixDQUFDO0FBQ2xELE9BQU8sRUFBRSxhQUFhLEVBQUUsTUFBTSxtQkFBbUIsQ0FBQztBQUNsRCxPQUFPLEVBQUUsY0FBYyxFQUFFLE1BQU0sb0JBQW9CLENBQUM7QUFDcEQsT0FBTyxFQUFFLGVBQWUsRUFBaUIsTUFBTSxtQkFBbUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IER3TW9kYWxDb21wb25lbnQgfSBmcm9tICcuL2R3LW1vZGFsLmNvbXBvbmVudCc7XG5leHBvcnQgeyBEd01vZGFsUmVmIH0gZnJvbSAnLi9kdy1tb2RhbC1yZWYuY2xhc3MnO1xuZXhwb3J0IHsgRHdNb2RhbE1vZHVsZSB9IGZyb20gJy4vZHctbW9kYWwubW9kdWxlJztcbmV4cG9ydCB7IER3TW9kYWxTZXJ2aWNlIH0gZnJvbSAnLi9kdy1tb2RhbC5zZXJ2aWNlJztcbmV4cG9ydCB7IERXX01PREFMX0NPTkZJRywgRHdNb2RhbENvbmZpZyB9IGZyb20gJy4vZHctbW9kYWwtY29uZmlnJztcbmV4cG9ydCAqIGZyb20gJy4vZHctbW9kYWwudHlwZSc7XG4iXX0=

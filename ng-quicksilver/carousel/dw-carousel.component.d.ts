@@ -1,0 +1,51 @@
+import { AfterContentInit, AfterViewInit, ElementRef, EventEmitter, OnDestroy, QueryList, Renderer2, TemplateRef } from '@angular/core';
+import { DwCarouselContentDirective } from './dw-carousel-content.directive';
+export declare type SwipeDirection = 'swipeleft' | 'swiperight';
+export declare class DwCarouselComponent implements AfterViewInit, OnDestroy, AfterContentInit {
+    elementRef: ElementRef;
+    private renderer;
+    private _autoPlay;
+    private _autoPlaySpeed;
+    private _dots;
+    private _vertical;
+    private _effect;
+    private unsubscribe$;
+    activeIndex: number;
+    transform: string;
+    timeout: any;
+    slideContents: QueryList<DwCarouselContentDirective>;
+    slickList: ElementRef;
+    slickTrack: ElementRef;
+    dwAfterChange: EventEmitter<number>;
+    dwBeforeChange: EventEmitter<{
+        from: number;
+        to: number;
+    }>;
+    dwEnableSwipe: boolean;
+    onWindowResize(e: UIEvent): void;
+    readonly nextIndex: number;
+    readonly prevIndex: number;
+    dwDotRender: TemplateRef<{
+        $implicit: number;
+    }>;
+    dwDots: boolean;
+    dwEffect: string;
+    dwAutoPlay: boolean;
+    dwAutoPlaySpeed: number;
+    dwVertical: boolean;
+    setActive(content: DwCarouselContentDirective, i: number): void;
+    renderContent(): void;
+    setUpAutoPlay(): void;
+    updateMode(): void;
+    clearTimeout(): void;
+    next(): void;
+    pre(): void;
+    goTo(index: number): void;
+    onKeyDown(e: KeyboardEvent): void;
+    swipe(action?: SwipeDirection): void;
+    swipeInProgress(e: any): void;
+    constructor(elementRef: ElementRef, renderer: Renderer2);
+    ngAfterContentInit(): void;
+    ngAfterViewInit(): void;
+    ngOnDestroy(): void;
+}

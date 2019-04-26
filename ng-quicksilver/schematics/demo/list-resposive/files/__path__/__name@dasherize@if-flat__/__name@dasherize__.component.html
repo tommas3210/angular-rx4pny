@@ -1,0 +1,16 @@
+
+  <dw-list
+    [dwDataSource]="data"
+    [dwRenderItem]="item"
+    [dwGrid]="{gutter: 16, xs: 24, sm: 12, md: 6, lg: 6, xl: 4 }">
+    <ng-template #item let-item>
+      <dw-list-item [dwContent]="dwContent">
+        <ng-template #dwContent>
+          <dw-card [dwTitle]="item.title">
+            Card content
+          </dw-card>
+        </ng-template>
+      </dw-list-item>
+    </ng-template>
+  </dw-list>
+  

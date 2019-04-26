@@ -1,0 +1,8 @@
+
+    <dw-pagination [dwPageIndex]="1" [dwTotal]="500" [dwItemRender]="renderItemTemplate"></dw-pagination>
+    <ng-template #renderItemTemplate let-type let-page="page">
+      <a *ngIf="type==='pre'">Previous</a>
+      <a *ngIf="type==='next'">Next</a>
+      <a *ngIf="type==='page'">{{page}}</a>
+    </ng-template>
+  

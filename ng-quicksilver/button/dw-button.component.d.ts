@@ -1,0 +1,45 @@
+import { AfterContentInit, ChangeDetectorRef, ElementRef, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { DwUpdateHostClassService } from '../core/services/update-host-class.service';
+import { DwWaveDirective } from '../core/wave/dw-wave.directive';
+export declare type DwButtonType = 'primary' | 'dashed' | 'danger';
+export declare type DwButtonShape = 'circle' | null;
+export declare type DwButtonSize = 'small' | 'large' | 'default';
+export declare class DwButtonComponent implements AfterContentInit, OnInit, OnDestroy {
+    private elementRef;
+    private cdr;
+    private renderer;
+    private dwUpdateHostClassService;
+    private ngZone;
+    private _ghost;
+    private _search;
+    private _type;
+    private _shape;
+    private _size;
+    private _loading;
+    private _block;
+    private el;
+    private iconElement;
+    private iconOnly;
+    private prefixCls;
+    private sizeMap;
+    contentElement: ElementRef;
+    dwBlock: boolean;
+    dwGhost: boolean;
+    dwSearch: boolean;
+    dwType: DwButtonType;
+    dwShape: DwButtonShape;
+    dwSize: DwButtonSize;
+    dwLoading: boolean;
+    dwWave: DwWaveDirective;
+    updateIconDisplay(value: boolean): void;
+    /** temp solution since no method add classMap to host https://github.com/angular/angular/issues/7289 */
+    setClassMap(): void;
+    checkContent(): void;
+    moveIcon(): void;
+    findFirstNotEmptyNode(value: HTMLElement): Node;
+    findLastNotEmptyNode(value: HTMLElement): Node;
+    constructor(elementRef: ElementRef, cdr: ChangeDetectorRef, renderer: Renderer2, dwUpdateHostClassService: DwUpdateHostClassService, ngZone: NgZone);
+    ngAfterContentInit(): void;
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+}

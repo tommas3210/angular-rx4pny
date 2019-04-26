@@ -1,0 +1,10 @@
+
+    <dw-tabset [dwTabBarExtraContent]="extraTemplate">
+      <dw-tab *ngFor="let tab of tabs" [dwTitle]="'Tab' + tab ">
+        Content of tab {{ tab }}
+      </dw-tab>
+    </dw-tabset>
+    <ng-template #extraTemplate>
+      <button dw-button>Extra Action</button>
+    </ng-template>
+  

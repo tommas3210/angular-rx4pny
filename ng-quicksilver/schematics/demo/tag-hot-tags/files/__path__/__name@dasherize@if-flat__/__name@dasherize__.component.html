@@ -1,0 +1,7 @@
+
+    <strong>Categories: </strong>
+    <dw-tag *ngFor="let tag of hotTags" dwMode="checkable"
+      [dwChecked]="selectedTags.indexOf(tag) > -1" (dwCheckedChange)="handleChange($event, tag)">
+      {{ tag }}
+    </dw-tag>
+  

@@ -1,0 +1,17 @@
+
+    <dw-date-picker
+      dwFormat="yyyy-MM-dd HH:mm:ss"
+      [dwDisabledDate]="disabledDate"
+      [dwDisabledTime]="disabledDateTime"
+      [dwShowTime]="{ dwDefaultOpenValue: timeDefaultValue }">
+    </dw-date-picker>
+    <br>
+    <dw-month-picker [dwDisabledDate]="disabledDate" dwPlaceHolder="Select month"></dw-month-picker>
+    <br>
+    <dw-range-picker
+      [dwDisabledDate]="disabledDate"
+      [dwDisabledTime]="disabledRangeTime"
+      [dwShowTime]="{ dwHideDisabledOptions: true, dwDefaultOpenValue: timeDefaultValue }"
+      dwFormat="yyyy-MM-dd HH:mm:ss"
+    ></dw-range-picker>
+  

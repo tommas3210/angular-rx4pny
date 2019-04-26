@@ -1,0 +1,55 @@
+<div dw-row class="dw-f-form-head" *ngIf="defs.isFilter">
+  <dw-form-item dw-row>
+    <dw-form-control dw-col [dwSm]="24" [dwXs]="24">
+      <dw-input-group dwSuffixIcon="anticon anticon-search">
+        <input #searchTextInput type="text" dw-input placeholder="{{'dw-pleaseEnter' | translate}}" [(ngModel)]="searchText" name="searchText">
+      </dw-input-group>
+    </dw-form-control>
+  </dw-form-item>
+</div>
+
+
+<dw-radio-group [(ngModel)]="radioModel" name="radioGroup">
+  <dw-table #selectionTable
+    [dwData]="datas"
+    [(dwPageSize)]="dwPageSize"
+    [(dwTotal)]="dwTotal"
+    [(dwPageIndex)]="dwPageIndex"
+    [(dwLoading)]="dwLoading"
+    [dwFrontPagination]="defs.dwFrontPagination"
+    [dwShowPagination]="defs.dwShowPagination"
+    [dwShowSizeChanger]="defs.dwShowSizeChanger"
+    [dwNoResult]="defs.dwNoResult"
+    (dwCurrentPageDataChange)="currentPageDataChange($event)"
+    (dwPageIndexChange)="pageIndexChange()"
+    (dwPageSizeChange)="pageSizeChange()"
+    [(dwPageSizeOptions)]="defs.dwPageSizeOptions">
+    <thead (dwSortChange)="sortChange($event)" dwSingleSort>
+      <tr>
+        <th *ngIf="defs.multiSelect" dwShowCheckbox [(dwChecked)]="allChecked" [dwIndeterminate]="indeterminate" (dwCheckedChange)="checkAll($event)"></th>
+        <th *ngIf="!defs.multiSelect"> </th>
+        <th *ngFor="let cols of defs.colDefs" dwShowSort dwSortKey="{{cols.field}}" dwWidth="{{cols.width}}">{{cols.title | translate}}</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="defs.dwFrontPagination">
+      <tr *ngFor="let rows of selectionTable.data| DwSelectModalSearchPipe: searchText">
+        <td *ngIf="defs.multiSelect" dwShowCheckbox [(dwChecked)]="rows.dwChecked" (dwCheckedChange)="refreshStatus()"></td>
+        <td *ngIf="!defs.multiSelect"><label dw-radio dwValue="{{rows.dwValue}}"></label></td>
+        <td *ngFor="let cols of defs.colDefs">{{rows[cols.field]}}</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="!defs.dwFrontPagination">
+      <tr *ngFor="let rows of selectionTable.data">
+        <td *ngIf="defs.multiSelect" dwShowCheckbox [(dwChecked)]="rows.dwChecked" (dwCheckedChange)="refreshStatus()"></td>
+        <td *ngIf="!defs.multiSelect"><label dw-radio dwValue="{{rows.dwValue}}"></label></td>
+        <td *ngFor="let cols of defs.colDefs">{{rows[cols.field]}}</td>
+      </tr>
+    </tbody>
+  </dw-table>
+</dw-radio-group>
+
+<div class="dw-f-pop-tag-select" *ngIf="defs.showTag && defs.multiSelect">
+  <span *ngFor="let tags of datas">
+    <dw-tag class="dw-f-tag-s" *ngIf="tags.dwChecked" dwMode="closeable" (dwOnClose)="onTagClose($event, tags)" [dwColor]="'blue'">({{tags[defs.idField]}}){{tags[defs.nameField]}}</dw-tag>
+  </span>
+</div>

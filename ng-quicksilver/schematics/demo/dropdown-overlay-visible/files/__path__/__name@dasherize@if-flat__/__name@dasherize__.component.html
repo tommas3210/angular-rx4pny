@@ -1,0 +1,11 @@
+
+    <dw-dropdown [dwClickHide]="false" [(dwVisible)]="visible">
+      <a dw-dropdown>
+        Hover me <i class="anticon anticon-down"></i>
+      </a>
+      <ul dw-menu>
+        <li dw-menu-item>Clicking me will not close the menu.</li>
+        <li dw-menu-item>Clicking me will not close the menu also.</li>
+        <li dw-menu-item (click)="visible = false">Clicking me will close the menu</li>
+      </ul>
+    </dw-dropdown>

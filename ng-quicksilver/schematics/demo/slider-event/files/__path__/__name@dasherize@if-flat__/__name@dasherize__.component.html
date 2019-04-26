@@ -1,0 +1,14 @@
+
+    <dw-slider
+      [dwDefaultValue]="30"
+      [(ngModel)]="singleValue" (ngModelChange)="onChange($event)"
+      (dwOnAfterChange)="onAfterChange($event)"
+    ></dw-slider>
+    <dw-slider
+      dwRange
+      [dwStep]="10"
+      [dwDefaultValue]="[20, 50]"
+      [(ngModel)]="rangeValue" (ngModelChange)="onChange($event)"
+      (dwOnAfterChange)="onAfterChange($event)"
+    ></dw-slider>
+  

@@ -1,0 +1,9 @@
+
+    <dw-tabset>
+      <dw-tab
+        *ngFor="let tab of tabs"
+        [dwTitle]="tab.name"
+        [dwDisabled]="tab.disabled">
+        {{ tab.name }}
+      </dw-tab>
+    </dw-tabset>

@@ -1,0 +1,24 @@
+<dw-tabset [dwType]="'card'" [dwSelectedIndex]="selectedIndex" (dwSelectedIndexChange)="selectedIndexChange($event)" class="dw-f-tabset-bar">
+  <dw-tab *ngFor="let tab of tabs" (dwClick)="tabClick(tab)" (dwSelect)="tabSelected(tab)" [dwTitle]="titleTemplate">
+    <ng-template #titleTemplate>
+      <div>
+        <i [ngClass]="'anticon ' + tab.iconClass" *ngIf="!!tab.iconClass"></i>
+        <dw-menu-item-name [menuId]="tab.menuId" [programId]="tab.id" [dwShowTooltip]="false"></dw-menu-item-name>
+        <i class="anticon anticon-cross" (click)="closeTab(tab)" *ngIf="tab.canClose||tab.canClose!==false"></i>
+      </div>
+    </ng-template>
+  </dw-tab>
+  <!-- <ng-template #dwTabBarExtraContent>
+    <i class="ant-tabs-new-tab anticon anticon-plus" (click)="newTab()"></i>
+  </ng-template> -->
+</dw-tabset>
+<!-- <div style="text-align: center;margin-top:50px">
+    <dw-spin ></dw-spin>
+</div> -->
+<div class="dw-f-tab-info-wp" #tabContent >
+    <div *ngFor="let iframeItem of iframeItems">
+        <dw-base-iframe [item]="iframeItem.item" [style.display]="(iframeItem.isDisplay===true) ? 'block': 'none'"></dw-base-iframe>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+<!-- <div class="tabRoutingMask"  *ngIf="tabCreating"></div> -->

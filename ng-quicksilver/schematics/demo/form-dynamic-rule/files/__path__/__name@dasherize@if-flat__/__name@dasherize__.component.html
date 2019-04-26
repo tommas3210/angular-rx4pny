@@ -1,0 +1,28 @@
+
+    <form dw-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+      <dw-form-item>
+        <dw-form-label [dwSpan]="4" dwRequired dwFor="name">Name</dw-form-label>
+        <dw-form-control [dwSpan]="8">
+          <input type="text" dw-input formControlName="name" placeholder="Please input your name">
+          <dw-form-explain *ngIf="validateForm.get('name').dirty && validateForm.get('name').errors">Please input your name</dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-label [dwSpan]="4" dwFor="nickname" [dwRequired]="validateForm.get('required')?.value">Nickname</dw-form-label>
+        <dw-form-control [dwSpan]="8">
+          <input type="text" dw-input formControlName="nickname" placeholder="Please input your nickname">
+          <dw-form-explain *ngIf="validateForm.get('nickname').dirty && validateForm.get('nickname').errors">Please input your nickname</dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-control [dwSpan]="8" [dwOffset]="4">
+          <label dw-checkbox formControlName="required" (ngModelChange)="requiredChange($event)">Nickname is required</label>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-control [dwSpan]="8" [dwOffset]="4">
+          <button dw-button dwType="primary">Check</button>
+        </dw-form-control>
+      </dw-form-item>
+    </form>
+  

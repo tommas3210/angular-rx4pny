@@ -1,0 +1,17 @@
+
+    <dw-date-picker
+      dwShowTime
+      dwFormat="yyyy-MM-dd HH:mm:ss"
+      dwPlaceHolder="Select Time"
+      (ngModelChange)="onChange($event)"
+      (dwOnOk)="onOk($event)"
+    ></dw-date-picker>
+    <br>
+    <dw-range-picker
+      [dwShowTime]="{ dwFormat: 'HH:mm' }"
+      dwFormat="yyyy-MM-dd HH:mm"
+      [dwPlaceHolder]="[ 'Start Time', 'End Time' ]"
+      (ngModelChange)="onChange($event)"
+      (dwOnOk)="onOk($event)"
+    ></dw-range-picker>
+  

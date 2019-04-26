@@ -1,0 +1,11 @@
+
+    <dw-modal [(dwVisible)]="isVisible" dwTitle="Please select" (dwOnCancel)="handleCancel($event)" (dwOnOk)="handleOk($event)">
+      <dw-cascader
+        [dwOptions]="dwOptions"
+        [(ngModel)]="values"
+        (ngModelChange)="onChanges($event)">
+      </dw-cascader>
+    </dw-modal>
+
+    <button dw-button (click)="open()">Open Dialog</button>
+    

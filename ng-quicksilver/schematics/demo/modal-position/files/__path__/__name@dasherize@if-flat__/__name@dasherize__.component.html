@@ -1,0 +1,17 @@
+
+    <button dw-button dwType="primary" (click)="showModalTop()">Display a modal dialog at 20px to Top</button>
+    <dw-modal [dwStyle]="{ top: '20px' }" [(dwVisible)]="isVisibleTop" dwTitle="20px to Top" (dwOnCancel)="handleCancelTop()" (dwOnOk)="handleOkTop()">
+      <p>some contents...</p>
+      <p>some contents...</p>
+      <p>some contents...</p>
+    </dw-modal>
+
+    <br/><br/>
+
+    <button dw-button dwType="primary" (click)="showModalMiddle()">Vertically centered modal dialog</button>
+    <dw-modal dwWrapClassName="vertical-center-modal" [(dwVisible)]="isVisibleMiddle" dwTitle="Vertically centered modal dialog" (dwOnCancel)="handleCancelMiddle()" (dwOnOk)="handleOkMiddle()">
+      <p>some contents...</p>
+      <p>some contents...</p>
+      <p>some contents...</p>
+    </dw-modal>
+  

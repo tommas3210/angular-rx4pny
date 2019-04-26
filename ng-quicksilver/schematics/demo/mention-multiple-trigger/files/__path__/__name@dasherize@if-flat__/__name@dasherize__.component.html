@@ -1,0 +1,11 @@
+
+  <dw-mention
+    [dwSuggestions]="suggestions"
+    (dwOnSearchChange)="onSearchChange($event)"
+    [dwPrefix]="['#', '@']">
+    <input
+      placeholder="input @ to mention people, # to mention tag"
+      dwMentionTrigger
+      dw-input
+      [(ngModel)]="inputValue">
+  </dw-mention>

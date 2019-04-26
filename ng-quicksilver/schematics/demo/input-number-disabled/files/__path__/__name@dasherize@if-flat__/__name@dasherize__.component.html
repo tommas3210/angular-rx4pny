@@ -1,0 +1,7 @@
+
+    <dw-input-number [(ngModel)]="demoValue" [dwMin]="1" [dwMax]="10" [dwStep]="1" [dwDisabled]="isDisabled"></dw-input-number>
+    <div style="margin-top:20px;">
+      <button dw-button [dwType]="'primary'" (click)="toggleDisabled()">
+        <span>Toggle Disabled</span>
+      </button>
+    </div>

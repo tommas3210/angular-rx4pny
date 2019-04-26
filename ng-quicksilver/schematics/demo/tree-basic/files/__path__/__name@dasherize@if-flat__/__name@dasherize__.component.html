@@ -1,0 +1,13 @@
+
+    <dw-tree
+      #treeCom
+      [dwData]="nodes"
+      dwCheckable="true"
+      dwMultiple="true"
+      [dwCheckedKeys]="defaultCheckedKeys"
+      [dwExpandedKeys]="defaultExpandedKeys"
+      [dwSelectedKeys]="defaultSelectedKeys"
+      (dwClick)="dwClick($event)"
+      (dwCheckBoxChange)="dwCheck($event)">
+    </dw-tree>
+  

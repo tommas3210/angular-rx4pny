@@ -1,0 +1,9 @@
+
+    <dw-tabset>
+      <dw-tab *ngFor="let tab of tabs" [dwTitle]="titleTemplate">
+        <ng-template #titleTemplate>
+          <i [ngClass]="tab.icon"></i>{{ tab.name }}
+        </ng-template>
+        {{ tab.name }}
+      </dw-tab>
+    </dw-tabset>

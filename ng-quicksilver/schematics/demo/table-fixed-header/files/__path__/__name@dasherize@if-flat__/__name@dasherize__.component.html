@@ -1,0 +1,17 @@
+
+    <dw-table #dwTable [dwData]="dataSet" [dwPageSize]="50" [dwScroll]="{ y: '240px' }">
+      <thead>
+        <tr>
+          <th dwWidth="150px">Name</th>
+          <th dwWidth="150px">Age</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of dwTable.data">
+          <td>{{data.name}}</td>
+          <td>{{data.age}}</td>
+          <td>{{data.address}}</td>
+        </tr>
+      </tbody>
+    </dw-table>

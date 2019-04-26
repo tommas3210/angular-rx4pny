@@ -1,0 +1,24 @@
+
+    <button dw-button dwType="primary" (click)="showModal()">
+      <span>Show Modal</span>
+    </button>
+    <dw-modal [(dwVisible)]="isVisible" [dwTitle]="modalTitle" [dwContent]="modalContent" [dwFooter]="modalFooter" (dwOnCancel)="handleCancel()">
+      <ng-template #modalTitle>
+        Custom Modal Title
+      </ng-template>
+
+      <ng-template #modalContent>
+        <p>Modal Content</p>
+        <p>Modal Content</p>
+        <p>Modal Content</p>
+        <p>Modal Content</p>
+        <p>Modal Content</p>
+      </ng-template>
+
+      <ng-template #modalFooter>
+        <span>Modal Footer: </span>
+        <button dw-button dwType="default" (click)="handleCancel()">Custom Callback</button>
+        <button dw-button dwType="primary" (click)="handleOk()" [dwLoading]="isConfirmLoading">Custom Submit</button>
+      </ng-template>
+    </dw-modal>
+  

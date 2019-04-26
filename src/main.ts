@@ -1,16 +1,21 @@
-import './polyfills';
-
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 
-platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
-  // Ensure Angular destroys itself on hot reloads.
-  if (window['ngRef']) {
-    window['ngRef'].destroy();
-  }
-  window['ngRef'] = ref;
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
+import { environment } from './environments/environment';
+import { NgxAnalyticsGoogleTagManager, NgxAnalyticsModule } from '@webdpt/analytics';
+import { NgxAnalyticsBaiduAnalytics } from '../projects/webdpt/analytics/src/lib/providers/baidu/ngx-analytics-baidu';
 
-  // Otherwise, log the boot error
-}).catch(err => console.error(err));
+if (environment.production) {
+  enableProdMode();
+}
+
+// Google Analytics
+NgxAnalyticsGoogleTagManager.createGaSession(environment.googleTagManager);
+registerLocaleData(zh);
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.log(err));

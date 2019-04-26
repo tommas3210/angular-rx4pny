@@ -1,0 +1,16 @@
+
+    <div style="margin-bottom: 16px;">
+      Tab position：
+      <dw-select [(ngModel)]="position" style="width: 80px;">
+        <dw-option
+          *ngFor="let option of options"
+          [dwLabel]="option.label"
+          [dwValue]="option.value">
+        </dw-option>
+      </dw-select>
+    </div>
+    <dw-tabset [dwTabPosition]="position" [dwType]="'line'">
+      <dw-tab *ngFor="let tab of tabs" [dwTitle]="'Tab'+ tab">
+        Content of tab {{ tab }}
+      </dw-tab>
+    </dw-tabset>

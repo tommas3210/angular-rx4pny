@@ -1,0 +1,12 @@
+
+  <dw-upload
+    dwAction="https://jsonplaceholder.typicode.com/posts/"
+    [dwFileList]="fileList"
+    dwMultiple
+    [dwLimit]="2"
+    (dwChange)="handleChange($event)">
+    <button dw-button>
+      <i class="anticon anticon-upload"></i><span>Upload</span>
+    </button>
+  </dw-upload>
+  

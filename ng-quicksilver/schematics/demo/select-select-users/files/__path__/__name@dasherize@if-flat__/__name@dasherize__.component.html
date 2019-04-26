@@ -1,0 +1,10 @@
+
+    <dw-select style="width: 100%;" dwMode="multiple" [(ngModel)]="selectedUser" dwPlaceHolder="Select users" dwAllowClear dwShowSearch [dwServerSearch]="true" (dwOnSearch)="onSearch($event)">
+      <ng-container *ngFor="let o of optionList">
+        <dw-option *ngIf="!isLoading" [dwValue]="o" [dwLabel]="o"></dw-option>
+      </ng-container>
+      <dw-option *ngIf="isLoading" dwDisabled dwCustomContent>
+        <i class="anticon anticon-loading anticon-spin loading-icon"></i> Loading Data...
+      </dw-option>
+    </dw-select>
+  

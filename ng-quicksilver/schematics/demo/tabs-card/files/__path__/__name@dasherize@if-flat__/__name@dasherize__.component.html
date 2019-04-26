@@ -1,0 +1,6 @@
+
+    <dw-tabset [dwTabPosition]="'top'" [dwType]="'card'">
+      <dw-tab *ngFor="let tab of tabs" [dwTitle]="'Tab' + tab ">
+        Content of Tab Pane {{ tab }}
+      </dw-tab>
+    </dw-tabset>

@@ -1,0 +1,12 @@
+
+    <dw-tree-select style="width: 250px"
+      dwPlaceHolder="Please select"
+      [dwDefaultExpandedKeys]="expandKeys"
+      [dwDropdownMatchSelectWidth]="true"
+      [dwDropdownStyle]="{ 'max-height': '300px' }"
+      [(ngModel)]="value"
+      [dwNodes]="nodes"
+      [dwAsyncData]="true"
+      (dwExpandChange)="onExpandChange($event)">
+    </dw-tree-select>
+  

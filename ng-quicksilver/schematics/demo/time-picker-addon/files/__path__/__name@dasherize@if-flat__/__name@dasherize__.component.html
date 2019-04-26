@@ -1,0 +1,6 @@
+
+    <dw-time-picker [(ngModel)]="time" [dwAddOn]="addOnTemplate" #timePicker></dw-time-picker>
+    <ng-template #addOnTemplate>
+      <button dw-button dwSize="small" dwType="primary" (click)="timePicker.close()">Ok</button>
+    </ng-template>
+  

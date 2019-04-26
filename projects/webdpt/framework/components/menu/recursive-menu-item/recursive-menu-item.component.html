@@ -1,0 +1,22 @@
+<ng-template #dwRecursiveMenuItemSpanTemplate>
+  <i *ngIf="menuItem.iconClass" [ngClass]="menuItem.iconClass"></i>
+  <i *ngIf="!menuItem.iconClass" [ngClass]="'dw-non-icon'"></i>
+  <span class="nav-text">
+    <dw-menu-item-name [menuId]="menuItem.id" [programId]="menuItem.programId"></dw-menu-item-name>
+  </span>
+</ng-template>
+
+<li dw-menu-item *ngIf="menuItem.child.length === 0" (click)="onClickItem(menuItem)" [dwDisabled]="menuItem.disabled" [dwSelected]="menuItem.selected">
+  <span>
+    <ng-container *ngTemplateOutlet="dwRecursiveMenuItemSpanTemplate"></ng-container>
+  </span>
+</li>
+<li dw-submenu *ngIf="menuItem.child.length > 0" [(dwOpen)]="menuItem.open" [dwDisabled]="menuItem.disabled">
+  <span title [ngStyle]="{'padding-left': menuItem.level >= 3 ? '24px' : '0px'}">
+    <ng-container *ngTemplateOutlet="dwRecursiveMenuItemSpanTemplate"></ng-container>
+  </span>
+  <ul>
+    <dw-recursive-menu-item [menuItem]="item" *ngFor="let item of menuItem.child">
+    </dw-recursive-menu-item>
+  </ul>
+</li>

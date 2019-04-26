@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: '<%= selector %>',
+  <% if(inlineTemplate) { %>template: `
+    <dw-card dwTitle="Card Title">
+      <p style="font-size:14px;color:rgba(0, 0, 0, 0.85);margin-bottom:16px;font-weight: 500;">
+        Group title
+      </p>
+      <dw-card dwType="inner" dwTitle="Inner Card Title" [dwExtra]="extraTemplate">
+        <a>Inner Card Content</a>
+      </dw-card>
+      <dw-card dwType="inner" style="margin-top:16px;" dwTitle="Inner Card Title" [dwExtra]="extraTemplate">
+        <a>Inner Card Content</a>
+      </dw-card>
+    </dw-card>
+    <ng-template #extraTemplate>
+      <a>More</a>
+    </ng-template>
+  `<% } else { %>templateUrl: './<%= dasherize(name) %>.component.html'<% } %>
+})
+export class <%= classify(name) %>Component {
+}

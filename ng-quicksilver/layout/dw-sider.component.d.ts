@@ -1,0 +1,34 @@
+import { AfterViewInit, EventEmitter, OnInit, TemplateRef } from '@angular/core';
+import { DwMatchMediaService } from '../core/services/dw-match-media.service';
+import { DwLayoutComponent } from './dw-layout.component';
+export declare type DwBreakPoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export declare class DwSiderComponent implements OnInit, AfterViewInit {
+    private dwLayoutComponent;
+    private dwMatchMediaService;
+    private _collapsed;
+    private _collapsible;
+    _trigger: TemplateRef<void>;
+    private _reverseArrow;
+    private below;
+    private isInit;
+    private dimensionMap;
+    dwWidth: number;
+    dwCollapsedWidth: number;
+    dwBreakpoint: DwBreakPoint;
+    dwReverseArrow: boolean;
+    dwTrigger: TemplateRef<void>;
+    dwCollapsible: boolean;
+    dwCollapsed: boolean;
+    dwCollapsedChange: EventEmitter<{}>;
+    readonly setZeroClass: boolean;
+    readonly setFlex: string;
+    readonly setWidth: number;
+    onWindowResize(e: UIEvent): void;
+    watchMatchMedia(): void;
+    toggleCollapse(): void;
+    readonly isZeroTrigger: boolean;
+    readonly isSiderTrigger: boolean;
+    constructor(dwLayoutComponent: DwLayoutComponent, dwMatchMediaService: DwMatchMediaService);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+}

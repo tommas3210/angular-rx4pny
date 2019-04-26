@@ -1,0 +1,23 @@
+
+    <dw-table #dwTable [dwData]="data">
+      <thead>
+        <tr>
+          <th dwWidth="40%">Name</th>
+          <th dwWidth="30%">Age</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-template ngFor let-data [ngForOf]="dwTable.data">
+          <ng-template ngFor let-item [ngForOf]="expandDataCache[data.key]">
+            <tr *ngIf="(item.parent&&item.parent.expand)||!(item.parent)">
+              <td [dwIndentSize]="item.level*20" [dwShowExpand]="!!item.children" [(dwExpand)]="item.expand" (dwExpandChange)="collapse(expandDataCache[data.key],item,$event)">
+                {{item.name}}
+              </td>
+              <td>{{item.age}}</td>
+              <td>{{item.address}}</td>
+            </tr>
+          </ng-template>
+        </ng-template>
+      </tbody>
+    </dw-table>

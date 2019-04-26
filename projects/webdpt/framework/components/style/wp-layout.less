@@ -1,0 +1,141 @@
+@import './wp-common.less';
+@import './wp-sider.less';
+@import './wp-header.less';
+//  上方凍結高度
+// @dw-f-header-h: 42px;
+.dw-f-header.ant-layout-header {
+  background: #fff;
+  padding: 0;
+  box-shadow: .06rem 0 .19rem rgba(0, 0, 0, .3); // position: relative;
+  height: @dw-f-header-h;
+  line-height: @dw-f-header-h;
+  z-index: 20;
+  position: fixed; // 上方凍結
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  &::before {
+    content: "";
+    position: absolute;
+  }
+  .dw-header-left {
+    padding-left: 5px;
+  }
+  .dw-header-right {
+    display: inline-flex;
+    margin-right: .88rem;
+    &>div {
+      margin: 0 .5rem;
+    }
+  }
+}
+
+//---------------------------------------------------------
+// @dw-f-header-h: 242px;
+.dw-f-wrapper {
+  margin-top: @dw-f-header-h;
+  min-height :~"calc(100vh - @{dw-f-header-h})";
+}
+
+.dw-fWp-tab-on .dw-f-wrapper {
+  //  頁籤凍結 內容下推的高度
+  margin-top: @dw-f-header-h + @dw-f-tabbar-h;
+  min-height :~"calc(100vh - @{dw-f-header-h} -  @{dw-f-tabbar-h})";
+}
+
+.dw-f-menusider.ant-layout-sider {
+  top: 0;
+  bottom: 0; // margin-top: 45px;
+  z-index: 5;
+  .dw-f-menu-right {
+    position: fixed; // 左側選單凍結
+    width: @dw-f-siderWidth;
+    background-color: @menu-dark-bg;
+  }
+  &.ant-layout-sider-collapsed {
+    // 左側浮動選單 寬度改變
+    .dw-f-menu-right {
+      width: @dw-f-siderCollapsedWidt;
+      .ant-menu-inline-collapsed {
+        // 縮小選單寬度
+        width: @dw-f-siderCollapsedWidt;
+      }
+    }
+  }
+}
+
+.dw-f-tabset-bar [dw-tabs-nav].ant-tabs-bar,
+.dw-f-tabset-bar [nz-tabs-nav].ant-tabs-bar {
+  // 頁籤凍結
+  position: fixed;
+  top: @dw-f-header-h - 2;
+  right: 0;
+  margin: 0;
+  padding-top: 8px;
+  background-color: #fff;
+  z-index: 18;
+}
+
+// // 頁尾開 頁籤開
+// .dw-fWp-top-fixed.dw-fWp-tab-on.dw-fWp-footer-on .dw-f-content-wp{
+//   min-height: ~"calc(100vh - 120px)";
+// }
+// // 頁尾開 頁籤關
+// .dw-fWp-top-fixed.dw-fWp-footer-on .dw-f-content-wp{
+//   min-height: ~"calc(100vh - 90px)";
+// }
+// ---------------------------------------------------------
+// !!  計算高度會造成 affix 計算不到超過一個頁面的數值  !!
+// 各種組合的高度
+// header 固定 >> dw-fWp-top-fixed | 頁尾顯示  >> dw-fWp-footer-on  |  頁籤顯示 >> dw-fWp-tab-on
+// ---------------------------------------------------------
+// ---------------------------------------------------------
+// iframe
+// iframe 預設的高度跟寬度會成比例
+// for finereport 高度滿版 [iframetype="fineReport"]
+// 頁尾  @dw-f-footer-h :28px
+// ---------------------------------------------------------
+.ww-iframe-overflow[iframetype="fineReport"] .ww-iframe-block {
+  padding-bottom: 0;
+  .dw-fWp-top-fixed & {
+    // header 固定
+    height:~"calc(100vh - @{dw-f-header-h})";
+  }
+  .dw-fWp-top-fixed.dw-fWp-tab-on & {
+    // header 固定 頁籤開
+    height:~"calc(100vh - (@{dw-f-header-h} + @{dw-f-tabbar-h}))";
+  }
+  .dw-fWp-top-fixed.dw-fWp-tab-on.dw-fWp-footer-on & {
+    // header 固定 頁籤開 頁尾開
+    height:~"calc(100vh - (@{dw-f-header-h} + @{dw-f-tabbar-h} + @{dw-f-footer-h}))";
+  }
+}
+
+// ---------------------------------------------------------
+// 選單寬度變數 凍結右移對應位置
+// ---------------------------------------------------------
+.dw-f-header.ant-layout-header {
+  margin-left: @dw-f-siderWidth;
+  width:~"calc(100% - @{dw-f-siderWidth} + 7px)"; // header 凍結 寬度變更
+}
+.dw-f-tabset-bar [dw-tabs-nav].ant-tabs-bar,
+.dw-f-tabset-bar [nz-tabs-nav].ant-tabs-bar {
+  // 頁籤凍結
+  left: @dw-f-siderWidth;
+}
+
+// 選單縮小 header 凍結 寬度變更
+.ant-layout-sider.ant-layout-sider-collapsed~.dw-f-wrapper .dw-f-header.ant-layout-header {
+  margin-left: @dw-f-siderCollapsedWidt;
+  width:~"calc(100% - @{dw-f-siderCollapsedWidt} + 7px)";
+}
+
+.ant-layout-sider.ant-layout-sider-collapsed~.dw-f-wrapper .dw-f-tabset-bar [dw-tabs-nav].ant-tabs-bar,
+.ant-layout-sider.ant-layout-sider-collapsed~.dw-f-wrapper .dw-f-tabset-bar [nz-tabs-nav].ant-tabs-bar {
+  left: @dw-f-siderCollapsedWidt;
+}
+
+//

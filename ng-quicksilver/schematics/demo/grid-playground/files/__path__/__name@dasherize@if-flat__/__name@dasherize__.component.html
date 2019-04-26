@@ -1,0 +1,20 @@
+
+    <div style="margin-bottom:16px;">
+      <span style="margin-right: 6px;">Gutter (px): </span>
+      <div style="width: 50%">
+        <dw-slider [dwMarks]="marksGutter" [dwStep]="null" [dwDefaultValue]="16" [dwMax]="48" [(ngModel)]="gutter"></dw-slider>
+      </div>
+      <span style="margin-right: 6px;">Column Count:</span>
+      <div style="width: 50%">
+        <dw-slider [dwMarks]="marksCount" [dwStep]="null" [dwDefaultValue]="4" [dwMax]="12" [(ngModel)]="count"></dw-slider>
+      </div>
+    </div>
+
+    <div class="gutter-example">
+      <div dw-row [dwGutter]="gutter">
+        <div dw-col class="gutter-row" [dwSpan]="24/count" *ngFor="let i of generateArray(count)">
+          <div class="grid-config">Column</div>
+        </div>
+      </div>
+    </div>
+  

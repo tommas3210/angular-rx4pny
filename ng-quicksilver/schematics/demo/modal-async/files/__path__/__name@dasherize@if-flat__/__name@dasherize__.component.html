@@ -1,0 +1,8 @@
+
+    <button dw-button dwType="primary" (click)="showModal()">
+      <span>Show Modal</span>
+    </button>
+    <dw-modal [(dwVisible)]="isVisible" dwTitle="Modal Title" (dwOnCancel)="handleCancel()" (dwOnOk)="handleOk()" [dwOkLoading]="isOkLoading">
+      <p>Modal Content</p>
+    </dw-modal>
+  

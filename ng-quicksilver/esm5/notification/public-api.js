@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+export { DW_NOTIFICATION_DEFAULT_CONFIG, DW_NOTIFICATION_CONFIG, DW_NOTIFICATION_DEFAULT_CONFIG_PROVIDER } from './dw-notification-config';
+export { DwNotificationComponent } from './dw-notification.component';
+export { DwNotificationModule } from './dw-notification.module';
+export { DwNotificationService } from './dw-notification.service';
+export { DwNotificationContainerComponent } from './dw-notification-container.component';
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25nLXF1aWNrc2lsdmVyLyIsInNvdXJjZXMiOlsibm90aWZpY2F0aW9uL3B1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7OztBQUFBLGdIQUFjLDBCQUEwQixDQUFDO0FBQ3pDLHdDQUFjLDZCQUE2QixDQUFDO0FBQzVDLHFDQUFjLDBCQUEwQixDQUFDO0FBRXpDLHNDQUFjLDJCQUEyQixDQUFDO0FBQzFDLGlEQUFjLHVDQUF1QyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0ICogZnJvbSAnLi9kdy1ub3RpZmljYXRpb24tY29uZmlnJztcbmV4cG9ydCAqIGZyb20gJy4vZHctbm90aWZpY2F0aW9uLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2R3LW5vdGlmaWNhdGlvbi5tb2R1bGUnO1xuZXhwb3J0ICogZnJvbSAnLi9kdy1ub3RpZmljYXRpb24uZGVmaW5pdGlvbnMnO1xuZXhwb3J0ICogZnJvbSAnLi9kdy1ub3RpZmljYXRpb24uc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2R3LW5vdGlmaWNhdGlvbi1jb250YWluZXIuY29tcG9uZW50JztcbiJdfQ==

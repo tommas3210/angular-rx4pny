@@ -1,0 +1,6 @@
+<dw-spin [dwSpinning]="loadingMask.spinning" [dwSize]="'default'" [dwTip]="loadingMask.tip" [dwDelay]="loadingMask.delay">
+  <ul dw-menu [dwTheme]="theme" [dwMode]="mode" [dwInlineCollapsed]="inlineCollapsed" [dwSelectable]="selectable"
+    [ngClass]="{'en_US':language==='en_US','zh_CN':language==='zh_CN'}" class="dw-f-menu-ul">
+    <dw-recursive-menu-item [menuItem]="menuListItem" *ngFor="let menuListItem of menuList"></dw-recursive-menu-item>
+  </ul>
+</dw-spin>

@@ -1,0 +1,18 @@
+
+    <div>
+      <dw-badge [dwCount]="count">
+        <a class="head-example"></a>
+      </dw-badge>
+      <dw-button-group>
+        <button dw-button (click)="minCount()"><i class="anticon anticon-minus"></i></button>
+        <button dw-button (click)="addCount()"><i class="anticon anticon-plus"></i></button>
+      </dw-button-group>
+    </div>
+
+    <div style="margin-top: 10px;">
+      <dw-badge [dwDot]="dot">
+        <a class="head-example"></a>
+      </dw-badge>
+      <dw-switch [(ngModel)]="dot"></dw-switch>
+    </div>
+  

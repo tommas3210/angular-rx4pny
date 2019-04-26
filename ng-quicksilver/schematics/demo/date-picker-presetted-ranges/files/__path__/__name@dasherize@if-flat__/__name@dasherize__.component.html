@@ -1,0 +1,15 @@
+
+    <dw-range-picker
+      [dwRanges]="ranges1"
+      ngModel
+      (ngModelChange)="onChange($event)"
+    ></dw-range-picker>
+    <br>
+    <dw-range-picker
+      [dwRanges]="ranges1"
+      dwShowTime
+      dwFormat="yyyy/MM/dd HH:mm:ss"
+      ngModel
+      (ngModelChange)="onChange($event)"
+    ></dw-range-picker>
+  

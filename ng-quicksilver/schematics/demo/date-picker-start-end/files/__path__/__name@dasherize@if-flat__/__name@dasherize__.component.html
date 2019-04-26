@@ -1,0 +1,21 @@
+
+    <dw-date-picker
+      [dwDisabledDate]="disabledStartDate"
+      dwShowTime
+      dwFormat="yyyy-MM-dd HH:mm:ss"
+      [(ngModel)]="startValue"
+      dwPlaceHolder="Start"
+      (ngModelChange)="onStartChange($event)"
+      (dwOnOpenChange)="handleStartOpenChange($event)">
+    </dw-date-picker>
+    <dw-date-picker
+      [dwDisabledDate]="disabledEndDate"
+      dwShowTime
+      dwFormat="yyyy-MM-dd HH:mm:ss"
+      [(ngModel)]="endValue"
+      dwPlaceHolder="End"
+      [dwOpen]="endOpen"
+      (ngModelChange)="onEndChange($event)"
+      (dwOnOpenChange)="handleEndOpenChange($event)">
+    </dw-date-picker>
+  

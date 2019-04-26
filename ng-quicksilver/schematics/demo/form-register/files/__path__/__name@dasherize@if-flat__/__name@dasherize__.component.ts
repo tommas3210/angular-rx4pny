@@ -1,0 +1,153 @@
+import { Component, OnInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators
+} from '@angular/forms';
+
+@Component({
+  selector: '<%= selector %>',
+  <% if(inlineTemplate) { %>template: `
+    <form dw-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+      <dw-form-item>
+        <dw-form-label [dwSm]="6" [dwXs]="24" dwRequired dwFor="email">E-mail</dw-form-label>
+        <dw-form-control [dwSm]="14" [dwXs]="24">
+          <input dw-input formControlName="email" id="email">
+          <dw-form-explain *ngIf="validateForm.get('email').dirty && validateForm.get('email').errors">The input is not valid E-mail!</dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-label [dwSm]="6" [dwXs]="24" dwFor="password" dwRequired>Password</dw-form-label>
+        <dw-form-control [dwSm]="14" [dwXs]="24">
+          <input dw-input type="password" id="password" formControlName="password" (ngModelChange)="updateConfirmValidator()">
+          <dw-form-explain *ngIf="validateForm.get('password').dirty && validateForm.get('password').errors">Please input your password!</dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-label [dwSm]="6" [dwXs]="24" dwFor="checkPassword" dwRequired>Confirm Password</dw-form-label>
+        <dw-form-control [dwSm]="14" [dwXs]="24">
+          <input dw-input type="password" formControlName="checkPassword" id="checkPassword">
+          <dw-form-explain *ngIf="validateForm.get('checkPassword').dirty && validateForm.get('checkPassword').errors">
+            <ng-container *ngIf="validateForm.get('checkPassword').hasError('required')">
+              Please confirm your password!
+            </ng-container>
+            <ng-container *ngIf="validateForm.get('checkPassword').hasError('confirm')">
+              Two passwords that you enter is inconsistent!
+            </ng-container>
+          </dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-label [dwSm]="6" [dwXs]="24" dwFor="nickname" dwRequired>
+          <span>
+            Nickname
+            <dw-tooltip dwTitle="What do you want other to call you">
+              <i dw-tooltip class="anticon anticon-question-circle-o"></i>
+            </dw-tooltip>
+          </span>
+        </dw-form-label>
+        <dw-form-control [dwSm]="14" [dwXs]="24">
+          <input dw-input id="nickname" formControlName="nickname">
+          <dw-form-explain *ngIf="validateForm.get('nickname').dirty && validateForm.get('nickname').errors">Please input your nickname!</dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-label [dwSm]="6" [dwXs]="24" dwFor="phoneNumber" dwRequired>Phone Number</dw-form-label>
+        <dw-form-control [dwSm]="14" [dwXs]="24" [dwValidateStatus]="validateForm.controls['phoneNumber']">
+          <dw-input-group [dwAddOnBefore]="addOnBeforeTemplate">
+            <ng-template #addOnBeforeTemplate>
+              <dw-select formControlName="phoneNumberPrefix" style="width: 70px;">
+                <dw-option dwLabel="+86" dwValue="+86"></dw-option>
+                <dw-option dwLabel="+87" dwValue="+87"></dw-option>
+              </dw-select>
+            </ng-template>
+            <input formControlName="phoneNumber" id="'phoneNumber'" dw-input>
+          </dw-input-group>
+          <dw-form-explain *ngIf="validateForm.get('phoneNumber').dirty && validateForm.get('phoneNumber').errors">Please input your phone number!</dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-label [dwSm]="6" [dwXs]="24" dwFor="website" dwRequired>Website</dw-form-label>
+        <dw-form-control [dwSm]="14" [dwXs]="24">
+          <input dw-input id="website" formControlName="website" placeholder="website">
+          <dw-form-explain *ngIf="validateForm.get('website').dirty && validateForm.get('website').errors">Please input website!</dw-form-explain>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item>
+        <dw-form-label [dwSm]="6" [dwXs]="24" dwFor="captcha" dwRequired>Captcha</dw-form-label>
+        <dw-form-control [dwSm]="14" [dwXs]="24">
+          <div dw-row [dwGutter]="8">
+            <div dw-col [dwSpan]="12">
+              <input dw-input formControlName="captcha" id="captcha">
+            </div>
+            <div dw-col [dwSpan]="12">
+              <button dw-button (click)="getCaptcha($event)">Get captcha</button>
+            </div>
+          </div>
+          <dw-form-explain *ngIf="validateForm.get('captcha').dirty && validateForm.get('captcha').errors">Please input the captcha you got!</dw-form-explain>
+          <dw-form-extra>We must make sure that your are a human.</dw-form-extra>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item dw-row style="margin-bottom:8px;">
+        <dw-form-control [dwSpan]="14" [dwOffset]="6">
+          <label dw-checkbox formControlName="agree">
+            <span>I have read the <a>agreement</a></span>
+          </label>
+        </dw-form-control>
+      </dw-form-item>
+      <dw-form-item dw-row style="margin-bottom:8px;">
+        <dw-form-control [dwSpan]="14" [dwOffset]="6">
+          <button dw-button dwType="primary">Register</button>
+        </dw-form-control>
+      </dw-form-item>
+    </form>`<% } else { %>templateUrl: './<%= dasherize(name) %>.component.html'<% } %>,
+
+  <% if(inlineStyle) { %>styles: [`[dw-form] {
+      max-width: 600px;
+    }`]<% } else { %>styleUrls: ['./<%= dasherize(name) %>.component.<%= styleext %>']<% } %>
+})
+export class <%= classify(name) %>Component implements OnInit {
+  validateForm: FormGroup;
+
+  submitForm(): void {
+    for (const i in this.validateForm.controls) {
+      this.validateForm.controls[ i ].markAsDirty();
+      this.validateForm.controls[ i ].updateValueAndValidity();
+    }
+  }
+
+  updateConfirmValidator(): void {
+    /** wait for refresh value */
+    Promise.resolve().then(() => this.validateForm.controls.checkPassword.updateValueAndValidity());
+  }
+
+  confirmationValidator = (control: FormControl): { [s: string]: boolean } => {
+    if (!control.value) {
+      return { required: true };
+    } else if (control.value !== this.validateForm.controls.password.value) {
+      return { confirm: true, error: true };
+    }
+  }
+
+  getCaptcha(e: MouseEvent): void {
+    e.preventDefault();
+  }
+
+  constructor(private fb: FormBuilder) {
+  }
+
+  ngOnInit(): void {
+    this.validateForm = this.fb.group({
+      email            : [ null, [ Validators.email ] ],
+      password         : [ null, [ Validators.required ] ],
+      checkPassword    : [ null, [ Validators.required, this.confirmationValidator ] ],
+      nickname         : [ null, [ Validators.required ] ],
+      phoneNumberPrefix: [ '+86' ],
+      phoneNumber      : [ null, [ Validators.required ] ],
+      website          : [ null, [ Validators.required ] ],
+      captcha          : [ null, [ Validators.required ] ],
+      agree            : [ false ]
+    });
+  }
+}

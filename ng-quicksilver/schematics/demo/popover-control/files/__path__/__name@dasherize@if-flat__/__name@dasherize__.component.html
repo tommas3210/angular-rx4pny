@@ -1,0 +1,16 @@
+
+    <button
+      dw-button
+      dwType="primary"
+      dw-popover
+      dwTitle="Title"
+      [(dwVisible)]="visible"
+      (dwVisibleChange)="change($event)"
+      dwTrigger="click"
+      [dwContent]="contentTemplate">
+      Click me
+    </button>
+    <ng-template #contentTemplate>
+      <a (click)='clickMe()'>Close</a>
+    </ng-template>
+  

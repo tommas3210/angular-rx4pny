@@ -1,0 +1,28 @@
+
+    <dw-tree
+      #treeCom
+      [dwData]="nodes"
+      dwMultiple="true"
+      (dwClick)="activeNode($event)"
+      (dwDblClick)="openFolder($event)">
+      <ng-template #contextTemplate>
+        <ul dw-menu dwInDropDown>
+          <li dw-menu-item (click)="selectDropdown('file')">新建文件</li>
+          <li dw-menu-item (click)="selectDropdown('folder')">新建文件夹</li>
+        </ul>
+      </ng-template>
+      <ng-template #dwTreeTemplate let-node>
+        <span class="custom-node" [class.active]="activedNode?.key===node.key">
+          <span *ngIf="!node.isLeaf" (contextmenu)="contextMenu($event,contextTemplate)">
+            <i class="anticon" [ngClass]="node.isExpanded ? 'anticon-folder-open' : 'anticon-folder'" (click)="openFolder(node)"></i>
+            <span class="folder-name">{{node.title}}</span>
+            <span class="folder-desc">created by {{node?.origin?.author | lowercase}}</span>
+          </span>
+          <span *ngIf="node.isLeaf">
+            <i class="anticon anticon-file"></i>
+            <span class="file-name">{{node.title}}</span>
+            <span class="file-desc">modified by {{node?.origin?.author | lowercase}}</span>
+          </span>
+        </span>
+      </ng-template>
+    </dw-tree>

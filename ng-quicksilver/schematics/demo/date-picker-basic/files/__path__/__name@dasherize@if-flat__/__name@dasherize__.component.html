@@ -1,0 +1,13 @@
+
+    <dw-date-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" dwShowTime></dw-date-picker>
+    <br>
+    <dw-month-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" dwPlaceHolder="Select month"></dw-month-picker>
+    <br>
+    <dw-year-picker [(ngModel)]="date" (ngModelChange)="onChange($event)" dwPlaceHolder="Select year"></dw-year-picker>
+    <br>
+    <dw-range-picker [(ngModel)]="dateRange" (ngModelChange)="onChange($event)" dwShowTime></dw-range-picker>
+    <br>
+    <dw-week-picker [(ngModel)]="date" (ngModelChange)="getWeek($event)" dwPlaceHolder="Select week"></dw-week-picker>
+    <br>
+    <button dw-button dwType="default" (click)="changeLanguage()">Switch language for all pickers</button>
+  

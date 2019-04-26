@@ -1,0 +1,36 @@
+import { AfterContentInit, ElementRef } from '@angular/core';
+import { ControlValueAccessor } from '@angular/forms';
+export declare type DwRadioGroupSizeType = 'large' | 'default' | 'small';
+export declare type DwRadioButtonStyle = 'outline' | 'solid';
+import { DwRadioButtonComponent } from './dw-radio-button.component';
+import { DwRadioComponent } from './dw-radio.component';
+export declare class DwRadioGroupComponent implements AfterContentInit, ControlValueAccessor {
+    private elementRef;
+    private _size;
+    private _name;
+    private _disabled;
+    el: HTMLElement;
+    value: string;
+    onChange: (_: string) => void;
+    onTouched: () => void;
+    radios: Array<DwRadioComponent | DwRadioButtonComponent>;
+    dwSize: DwRadioGroupSizeType;
+    dwDisabled: boolean;
+    dwName: string;
+    dwButtonStyle: DwRadioButtonStyle;
+    updateDisabledState(): void;
+    updateChildrenName(): void;
+    syncCheckedValue(): void;
+    readonly isLarge: boolean;
+    readonly isSmall: boolean;
+    readonly isSolid: boolean;
+    addRadio(radio: DwRadioComponent | DwRadioButtonComponent): void;
+    selectRadio(radio: DwRadioComponent | DwRadioButtonComponent): void;
+    updateValue(value: string, emit: boolean): void;
+    constructor(elementRef: ElementRef);
+    ngAfterContentInit(): void;
+    writeValue(value: string): void;
+    registerOnChange(fn: (_: string) => void): void;
+    registerOnTouched(fn: () => void): void;
+    setDisabledState(isDisabled: boolean): void;
+}

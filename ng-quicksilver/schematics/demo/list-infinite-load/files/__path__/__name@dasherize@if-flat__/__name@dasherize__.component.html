@@ -1,0 +1,24 @@
+
+  <div class="demo-infinite-container"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()"
+    [scrollWindow]="false">
+    <dw-list [dwDataSource]="data" [dwRenderItem]="item">
+      <ng-template #item let-item>
+        <dw-list-item>
+          <dw-list-item-meta
+              [dwTitle]="dwTitle"
+              dwAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+              [dwDescription]="item.email">
+              <ng-template #dwTitle>
+                  <a href="https://ng.ant.design">{{item.name.last}}</a>
+              </ng-template>
+          </dw-list-item-meta>
+        </dw-list-item>
+      </ng-template>
+      <dw-spin *ngIf="loading && hasMore" class="demo-loading"></dw-spin>
+    </dw-list>
+  </div>
+  

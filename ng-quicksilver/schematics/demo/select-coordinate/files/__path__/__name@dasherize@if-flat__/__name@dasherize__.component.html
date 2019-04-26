@@ -1,0 +1,10 @@
+
+    <div>
+      <dw-select style="width: 120px;" [(ngModel)]="selectedProvince" (ngModelChange)="provinceChange($event)">
+        <dw-option *ngFor="let p of provinceData" [dwValue]="p" [dwLabel]="p"></dw-option>
+      </dw-select>
+      <dw-select style="width: 120px;" [(ngModel)]="selectedCity">
+        <dw-option *ngFor="let c of cityData[selectedProvince]" [dwValue]="c" [dwLabel]="c"></dw-option>
+      </dw-select>
+    </div>
+  

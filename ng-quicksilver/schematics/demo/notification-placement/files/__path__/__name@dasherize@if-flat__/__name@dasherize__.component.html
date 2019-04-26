@@ -1,0 +1,9 @@
+
+    <dw-select [(ngModel)]="placement" style="width: 120px; margin-right: 10px;" (ngModelChange)="clearBeforeNotifications()">
+      <dw-option dwValue="topLeft" dwLabel="topLeft"></dw-option>
+      <dw-option dwValue="topRight" dwLabel="topRight"></dw-option>
+      <dw-option dwValue="bottomLeft" dwLabel="bottomLeft"></dw-option>
+      <dw-option dwValue="bottomRight" dwLabel="bottomRight"></dw-option>
+    </dw-select>
+    <button dw-button [dwType]="'primary'" (click)="createBasicNotification()">Open the notification box</button>
+  

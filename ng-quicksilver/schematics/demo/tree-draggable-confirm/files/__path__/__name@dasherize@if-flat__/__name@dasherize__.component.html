@@ -1,0 +1,13 @@
+
+    <dw-tree
+      [dwData]="nodes"
+      dwDraggable="true"
+      (dwExpandChange)="dwAction($event)"
+      [dwBeforeDrop]="beforeDrop"
+      (dwOnDragStart)="dwAction($event)"
+      (dwOnDragEnter)="dwAction($event)"
+      (dwOnDragLeave)="dwAction($event)"
+      (dwOnDrop)="dwAction($event)"
+      (dwOnDragEnd)="dwAction($event)">
+    </dw-tree>
+  
